@@ -1,0 +1,316 @@
+.container-fluid
+  .articles
+    .btn-more-news
+      @include btn()
+      margin: 0px 15px 20px
+      padding: 20px 0
+      width: calc(100% - 30px)
+      height: 70px
+      font-size: 18px
+      font-weight: 500
+
+    .article
+      width: 100%
+      border-bottom: $border
+      padding: 0
+      display: flex
+      flex-direction: column
+      &:last-of-type
+        border-bottom: none
+      .promo-banner
+        padding: 40px 15px 0
+        order: 1
+        a:active
+          opacity: 0.8
+      .article__title
+        margin: 40px 15px 20px
+        font-weight: 700
+        font-size: 32px
+      a
+        font-weight: 700
+        font-size: 20px
+      a:hover
+        text-decoration: none
+      a:active
+        color: $font-color-hover
+        opacity: 0.8
+
+      .card-title
+        margin: 20px 0 10px
+        font-weight: 700
+
+      .card-body
+        padding: 0
+        margin-right: 15px
+        .card-text
+          margin-bottom: 10px
+          font-size: 13px
+          font-weight: 400
+          &:last-child
+            margin-bottom: 0
+        .card-text__footer
+          display: flex
+          flex-wrap: nowrap
+          justify-content: flex-start
+          .text-muted
+            margin-right: 10px
+            font-size: 12px
+            color: font-small-color
+            font-weight: normal
+            &:last-child
+              margin-right: 0
+
+    .card-columns
+      border: none
+      padding: 0 15px
+      order: 2
+      &:last-child
+        padding-bottom: 15px
+      .card-img-top
+        height: calc(100vw / 2.05)
+        min-height: 175px
+
+    .card
+      border: none
+      margin-bottom: 30px
+      background-color: transparent
+
+    .row
+      margin: 20px 0 0
+
+    .article_type-3 .card-columns
+      column-count: 1
+
+    .article_type-1 .card-columns
+      column-count: 1
+      .card-columns
+        padding: 0
+        .row
+          margin-bottom: 0
+
+    .article_type-2.article
+        display: block
+        .carousel
+          padding: 0
+          .carousel-cell
+            width: 310px
+            padding-left: 20px
+            &:last-child
+              padding-right: 20px
+            .card-img-top
+              height: 175px
+            .card__sm
+              border: none
+
+              &:last-child
+                margin-right: 0
+                counter-increment: carousel-cell
+
+
+    .article_type-4
+      .row
+        margin-top: 30px
+        .card-body
+          padding: 0
+      .card.row.no-gutters:nth-child(3n+1)
+        .card-img-overlay
+          padding: 0
+        .card-img
+          min-width: 330px
+          min-height: 480px
+          height: calc(100vw  * 1.334)
+        .card-body
+          margin: 0
+          padding: 15px
+          background-image: linear-gradient(360deg, #FFFFFF 37.84%, rgba(255, 255, 255, 0) 100%)
+
+    .project
+      border: none
+      .card-columns
+        column-count: 1
+        padding-bottom: 0
+        padding-top: 0
+        .row:last-child
+          margin-bottom: 0
+
+
+@media (min-width: 768px)
+  .container-fluid
+    .articles
+      .article
+        display: flex
+        flex-direction: row
+        padding: 0 30px
+        .article__title
+          margin-left: 45px
+        .promo-banner
+          order: 2
+          margin-bottom: 60px
+          text-align: center
+          padding: 0
+          position: relative
+          overflow: hidden
+          .promo-banner_background
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            background:  no-repeat
+            background-size: cover
+            z-index: -1
+            margin: -5px -10px -10px -5px
+            filter: blur(30px)
+            -webkit-filter: blur(30px)
+            -moz-filter: blur(30px)
+            -ms-filter: blur(30px)
+          img
+            max-height: 425px
+            width: auto
+
+        .card-columns
+          order: 1
+      .article_type-3,.article_type-2
+        .row
+          padding: 60px 0
+          border-bottom: 1px solid $font-color
+          &:last-child
+            border: none
+      .article_type-3
+        flex-direction: column
+        .row
+          .col-md-5
+            max-width: 34%
+          .col-img
+            margin-right: 30px
+            img
+              height: calc(100vw * 0.159)
+              max-width: 350px
+              max-height: 175px
+          .col-desc
+            .card-title
+              margin: 0
+              margin-bottom: 10px
+            .card-text
+              margin-bottom: 10px
+      .article_type-2.article
+        padding: 0
+        .carousel
+          .carousel-cell
+            width: 350px
+            padding-left: 45px
+            .card-img-top
+              padding-right: 30px
+              height: 175px
+              width: 350px
+          .card__sm
+            border: none
+            width: 350px
+            &:last-child
+              margin-right: 0
+              counter-increment: carousel-cell
+      .article_type-1
+        display: flex
+        flex-direction: column
+        .card-columns
+          margin-bottom: 30px
+          &:first-child
+            column-count: 1
+          &:last-child
+            column-count: 2
+            .row
+              margin: 0
+              .col-img
+                img
+                  height: calc(100vw * 0.26)
+
+      .article_type-4
+        .card-columns
+          padding: 0
+          column-count: 2
+        .row
+          // margin-top: 30px
+          // .card-body
+          //   padding: 0
+        .card-columns:nth-child(3n+1)
+          column-count: 1
+        .card.row.no-gutters:nth-child(3n+1)
+          .card-img-overlay
+            // padding: 0
+          .card-img
+            width: 100%
+            // height: auto
+            height: calc(100vw  * 0.334)
+          .card-body
+            // margin: 0
+            padding: 34px 50px
+            background-image: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0.991353) 6.67%, rgba(255, 255, 255, 0.96449) 13.33%, rgba(255, 255, 255, 0.91834) 20%, rgba(255, 255, 255, 0.852589) 26.67%, rgba(255, 255, 255, 0.768225) 33.33%, rgba(255, 255, 255, 0.668116) 40%, rgba(255, 255, 255, 0.557309) 46.67%, rgba(255, 255, 255, 0.442691) 53.33%, rgba(255, 255, 255, 0.331884) 60%, rgba(255, 255, 255, 0.231775) 66.67%, rgba(255, 255, 255, 0.147411) 73.33%, rgba(255, 255,255, 0.0816599) 80%, rgba(255, 255, 255, 0.03551) 86.67%, rgba(255, 255, 255, 0.0086472) 93.33%, rgba(255, 255, 255, 0) 100%)
+
+
+@media (min-width: 1200px)
+  .container-fluid
+    .articles
+      padding: 0 45px
+      .article
+        padding: 0
+        .article__title
+          margin-left: 0
+          margin-right: 0
+        .promo-banner
+          position: sticky
+          display: block
+          width: 255px
+          height: 425px
+          order: 2
+          margin: 60px 0
+          padding: 0
+        .card-columns
+          order: 1
+
+      .article_type-1
+        flex-direction: row
+        .card-columns
+          column-count: 1
+          padding: 0
+          padding-top: 40px
+          &:first-child
+            .row
+              .card-title
+                font-size: 32px
+              .col-img
+                img
+                  width: 730px
+                  height: 372px
+          .row:first-child
+            margin-top: 0
+          &:last-child
+            column-count: 1
+            .row
+              margin-bottom: 60px
+              &:last-child
+                margin-bottom: 0
+              .col-img
+                img
+                  width: 350px
+                  height: 175px
+
+      .article_type-3
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        padding: 30px 0
+        .row
+          margin: 0
+          width: 825px
+        .card-columns
+          padding: 0
+      .article_type-2.article
+        .article__title
+          margin-left: 0
+        .carousel
+          .carousel-cell
+            padding-left: 0
+
+      .btn-more-news
+        margin-left: 0
+        margin-right: 35px
+        max-width: 825px

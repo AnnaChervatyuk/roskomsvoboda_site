@@ -1,0 +1,130 @@
+.container-fluid
+  .donate
+    margin-top: 80px
+    border-bottom: $border
+    display: flex
+    flex-direction: column
+    padding-bottom: 40px
+    .donate__header
+      .donate__title
+        margin: 0 auto
+        font-weight: 700
+        font-size: 32px
+        text-align: center
+    .donate__content
+      background-color: #F2EFF5
+      border-radius: 20px
+      margin: 30px 15px 20px
+      padding: 30px 20px
+      display: flex
+      flex-direction: column
+      .btn-donate
+        @include btn()
+        border-right: none
+        height: 40px
+        border-radius: 0
+        padding: 8px 20px
+        white-space: nowrap
+        &:last-child
+          border-right: 2px solid $font-color
+
+      .btn-donate.active
+        background-color: $font-color
+        color: #fff
+      .btn-donate:active
+        background-color: #F3F3F2
+        color: $font-color
+        opacity: 0.8
+      .donate__gift
+        margin: 40px auto 20px
+        text-align: center
+        .gift-image
+          width: 250px
+        .gift-text
+          font-weight: 400
+          font-size: 12px
+          text-align: center
+          color: rgba(4, 4, 4, 0.4)
+    .btn-donate_pay
+      @include btn()
+      margin: 20px 0
+      padding: 0
+      width: 100%
+      height: 40px
+
+    .btn-about_donate
+      @include btn()
+      margin: 10px auto
+      padding: 0px 20px
+      height: 30px
+    .card-text
+      font-weight: 500
+      font-size: 13px
+      text-align: center
+
+    .carousel
+      padding: 0
+      .carousel-cell
+        width: auto
+        box-shadow: none
+        counter-increment: carousel-cell
+        input[type=radio]
+          display: none
+
+
+@media (min-width: 768px)
+  .container-fluid
+    .donate
+      flex-direction: row
+      flex-wrap: wrap
+      padding: 0 45px
+      .donate__header
+        order: 1
+        display: block
+        margin-right: auto
+      .btn-about_donate
+        order: 2
+        display: block
+        margin: 10px 0
+      .donate__content
+        order: 3
+        width: 100%
+        margin: 20px 0
+
+
+@media (min-width: 1200px)
+  .container-fluid
+    .donate
+      flex-direction: row
+      flex-wrap: wrap
+      margin-left: 45px
+      margin-right: 45px
+      padding: 0
+      .donate__content
+        padding: 0
+        .donate_pay
+          display: flex
+          flex-direction: row
+          flex-wrap: wrap
+
+          .carousel
+            order: 1
+            width: 40%
+            margin: 50px auto 0 40px
+            height: 40px
+          .donate__gift
+            order: 2
+            margin: 0
+            padding: 0
+          .donate__btn
+            display: flex
+            flex-direction: row
+            order: 3
+            width: 100%
+            align-items: center
+            margin: -40px 0 50px 40px
+            .btn-donate_pay
+              width: auto
+              padding: 0 20px
+              margin: 0
+              margin-right: 32px

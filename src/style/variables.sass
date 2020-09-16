@@ -1,0 +1,59 @@
+$bg-green: #68b738
+$bg-gray: #f2f2f2
+$light-gray: #444444
+$text-white: #ffffff
+$border-gray: #ededed
+$tablet-width: 768px
+$desktop-width: 1300px
+
+$font-color: #1D1D1B
+$font-color-hover: #4661BC
+$font-small-color: #6B6B66
+$color-bg-hover: #E4E4E4
+
+$border: 2px solid $font-color
+
+$color-tel: #37AEE3
+$color-twitter: #1B94DF
+$color-fb: #1778F2
+$color-vk: #4A76A8
+$color-youtube: #FF0000
+$color-zen: #484F58
+$color-rss: #4661BC
+$color-instagram: #DB3270
+
+
+@mixin btn ()
+    border: $border
+    padding: 0
+    height: 27px
+    border-radius: 3px
+    box-sizing: border-box
+    font-weight: 500
+    font-size: 13px
+
+    &:hover
+      color: $font-color-hover
+      border-color: $font-color-hover
+    &:active
+      color: $font-color-hover
+      border-color: $font-color-hover
+      opacity: 0.8
+    &:focus
+      box-shadow: none
+
+@mixin icons ()
+  stroke: $font-color
+  stroke-width: 2
+  fill: transparent
+  stroke-linecap: round
+  stroke-linejoin: round
+  &:hover
+    stroke:  $font-color-hover
+  &:active
+    stroke:  $font-color-hover
+
+@mixin icons--rss ()
+  stroke-width: 4px
+  stroke: $font-color
+  fill: none
