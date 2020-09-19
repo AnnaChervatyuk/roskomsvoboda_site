@@ -39,7 +39,11 @@ module.exports = {
       new HtmlWebpackPlugin({ // Also generate a test.html
         filename: 'project.html',
         template: 'src/public/project.html'
-    })
+    }),
+    new HtmlWebpackPlugin({ // Also generate a test.html
+      filename: 'cards.html',
+      template: 'src/public/cards.html'
+  })
   ],
 
   devServer: {  // configuration for webpack-dev-server
