@@ -215,7 +215,9 @@
           </div>
          </div>
        </div>
-       <div class="info-block">
+       <div class="cards__wrapper  d-flex flex-row">
+         <div class="cards_inner">
+       <div class="card-article__info">
          <div class="tags-1">
            <h6>Карточки</h6>
          </div>
@@ -224,12 +226,84 @@
          </div>
       </div>
       <div class="card-article">
-        <div class="card-article__title">Нужен ли мне VPN и как его выбрать?</div>
-        <div class="card-article__notice">На днях произошла утечка персональных данных более чем 20 млн пользователей бесплатных VPN-сервисов — как такое могло произойти и стоит ли доверять VPN-сервисам?</div>
-        <div class="card-article__image"><img src="./images/image12.png" width="360" alt="картинка про VPN" /></div>
-        <div class="card-article__content">
-
+          <div class="card-article__title">Нужен ли мне VPN и как его выбрать?</div>
+          <div class="card-article__notice">На днях произошла утечка персональных данных более чем 20 млн пользователей бесплатных VPN-сервисов — как такое могло произойти и стоит ли доверять VPN-сервисам?</div>
+          <div class="card-article__image"><img src="./images/image12.png" width="360" alt="картинка про VPN" /></div>
+          <div class="card-article__content">
+            <div class="card-content" id="card1">
+              <h3 class="card-content__number">1</h3>
+              <h2 class="card-content__title">Что такое «VPN» и зачем нужен такой сервис?</h2>
+              <div class="card-content__text">
+                <p>Если говорить кратко и максимально упрощённо, VPN для пользователей — это инструмент для построения защищённого соединения с некоторым компьютером в интернете (VPN-сервером) и сёрфинг по Сети «сквозь» этот компьютер. Таким образом все ваши действия в интернете и передаваемые данные становятся недоступны для мониторинга со стороны вашего провайдера, киберпреступников или местных спецслужб: они видят только зашифрованный трафик, а сайты, которые вы посещаете, видят не ваш IP-адрес, а адрес VPN-сервера.</p>
+              </div>
+            </div>
+            <div class="card-content" id="card2">
+              <h3 class="card-content__number">2</h3>
+              <h2 class="card-content__title">VPN обеспечивает полную анонимность?</h2>
+              <div class="card-content__text">
+                <p>Нет.</p>
+                <p>Более того, сам VPN-сервер знает о вас всё: на какие сайты вы заходите и (иногда может знать) какими данными вы обмениваетесь с этими сайтами. Поэтому к выбору VPN-провайдера надо подходить очень внимательно.</p>
+              </div>
+            </div>
+            <div class="card-content" id="card3">
+              <h3 class="card-content__number">3</h3>
+              <h2 class="card-content__title">Может ли VPN-сервис быть бесплатным?</h2>
+              <div class="card-content__text">
+                <p>Любой VPN-сервис — это оборудование, настройка ПО и обслуживание этой инфраструктуры (а также покупка трафика для вас). Владельцам сервисов так или иначе необходимо всё это оплачивать. И даже если вы не платите напрямую VPN-сервису, то эти деньги он получает с вас как-то иначе. </p>
+                <p>В худшем случае бесплатный VPN-сервис будет воровать у вас логины и пароли от разных веб-сайтов, пытаться получить доступ к вашему банковскому счету, модифицировать трафик посещаемых сайтов для загрузки вирусов на компьютер. Ещё как вариант бесплатный VPN-сервис может подменять рекламу на некоторых посещаемых вами сайтах. Или же продавать информацию о вашей сетевой активности третьим лицам, например, рекламным агентствам.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="card-article__navigation d-none d-lg-table fixed sticky-top">
+          <div class="list-group">
+              <div class="list-item">1. <a href="#card1">Что такое «VPN» и зачем нужен такой сервис?</a></div>
+              <div class="list-item">2. <a href="#card2">VPN обеспечивает полную анонимность?</a></div>
+              <div class="list-item">3. <a href="#card3">Может ли VPN-сервис быть бесплатным?</a></div>
+          </div>
+        </div>
+    </div>
+      <div class="tags">
+        <div class="tags_group">
+          <a href="#" class="tag">Конституция</a>
+          <a href="#" class="tag">Право</a>
+          <a href="#" class="tag">GitHub</a>
+          <a href="#" class="tag">Персональные данные</a>
+          <a href="#" class="tag">Цифровое гражданство</a>
+          <a href="#" class="tag">Конституция</a>
+          <a href="#" class="tag">Персональные данные</a>
+          <a href="#" class="tag">Цифровое гражданство</a>
+          <a href="#" class="tag">Конституция</a>
+        </div>
+      </div>
+      <div class="share">
+        <h4>Поделитесь материалом</h4>
+        <div class="btn-group" role="group" aria-label="Basic example">
+           <button type="button" class="btn">
+              <svg class="icons icons--tel" width="42" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                 <use xlink:href="./images/sprite.svg#icon-tel"></use>
+              </svg>
+           </button>
+           <button type="button" class="btn">
+              <svg class="icons icons--fb" width="42" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                 <use xlink:href="./images/sprite.svg#icon-fb"></use>
+              </svg>
+           </button>
+           <button type="button" class="btn">
+              <svg class="icons icons--vk" width="42" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                 <use xlink:href="./images/sprite.svg#icon-vk"></use>
+              </svg>
+           </button>
+           <button type="button" class="btn">
+              <svg class="icons icons--twitter" width="42" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                 <use xlink:href="./images/sprite.svg#icon-twitter"></use>
+              </svg>
+           </button>
+           <!-- <div class="donate__btn">
+              <button type="button" class="btn btn-donate_pay">Поддержать Роскомсвободу&nbsp;&rarr;</button>
+           </div> -->
+         </div>
       </div>
          <div class="donate">
             <div class="donate__header">

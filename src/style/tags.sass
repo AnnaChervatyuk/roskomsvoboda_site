@@ -1,0 +1,33 @@
+.container-fluid
+  .tags
+    margin: 10px 15px
+    .tags_group
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      .tag
+        margin-right: 15px
+        margin-bottom: 15px
+        background: $bg-tag-color
+        border-radius: 20px
+        padding: 5px 10px
+        display: block
+        white-space: nowrap
+        font-size: 12px
+        &:last-child
+          margin-right: 0
+
+
+
+
+
+@media (min-width: 768px)
+  .container-fluid
+    .tags
+      margin: 10px 45px
+
+
+@media (min-width: 1200px)
+  .container-fluid
+    .tags
+      width: 830px

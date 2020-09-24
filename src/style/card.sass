@@ -1,31 +1,103 @@
 .container-fluid
-  .card-article
-    border: none
-    .card-article__title
-      margin: 0 15px
-      font-size: 26px
-      font-weight: 900
-      line-height: 31px
-    .card-article__notice
-      font-size: 21px
-      line-height: 34px
-      margin: 20px 15px 0
-    .card-article__image
-      margin: 30px 0 10px
+  .cards__wrapper
+    margin-top: 10px
+    .card-article__info
+      margin: 0 15px 10px
+      display: flex
+      flex-direction: row
+      flex-wrap: nowrap
 
+      .tags-1
+        display: flex
+        flex-direction: row
+        padding-top: 10px
+        flex-grow: 1
+        flex-wrap: wrap
+        h6
+          padding-right: 15px
+          font-weight: 700
+      .date
+        color: $font-color-gray
+        padding-top: 10px
+    .card-article
+      border: none
+      .card-article__title
+        margin: 0 15px
+        font-size: 26px
+        font-weight: 900
+        line-height: 31px
+      .card-article__notice
+        font-size: 21px
+        line-height: 34px
+        margin: 20px 15px 0
+      .card-article__image
+        margin: 30px 0 30px
+      .card-content
+        background-color: $bg-card-color
+        margin: 20px 15px 0
+        padding: 15px
+        border: 1px solid $border-card-color
+        border-radius: 20px
+        h3.card-content__number
+          font-size: 22px
+          color: #4661BC
+          text-align: center
+          margin-bottom: 12px
+        h2.card-content__title
+          font-size: 28px
+          text-align: center
+          font-weight: 700
+          margin-bottom: 20px
+        .card-content__text
+          font-size: 16px
 
 @media (min-width: 768px)
   .container-fluid
-    .card-article
-      .card-article__title
-        margin: 0 45px
-        font-size: 45px
-        line-height: 54px
-      .card-article__notice
-        margin: 20px 45px 0
+    .cards__wrapper
+      margin-top: 20px
+      .card-article__info
+        margin: 20px 45px
+      .card-article
+        .card-article__title
+          margin: 0 45px
+          font-size: 45px
+          line-height: 54px
+        .card-article__notice
+          margin: 20px 45px 0
+        .card-content
+          padding: 30px
+          margin: 20px 45px 0
+        .card-content__text
+          font-size: 18px
 
 @media (min-width: 1200px)
   .container-fluid
-    .card-article
-      .card-article__title
-        font-size: 50px
+    .cards__wrapper
+      margin-top: 35px
+      .card-article
+        width: 830px
+        margin-left: 45px
+        margin-right: 25px
+        .card-article__title
+          font-size: 50px
+          margin: 0
+        .card-article__notice
+          margin: 0
+        .card-content
+          margin: 20px 0
+          padding: 60px 70px
+
+      .card-article__navigation
+        width: 255px
+        margin-top: 10px
+        margin-bottom: 15px
+        padding: 25px
+        background-color: $bg-card-color
+        display: block
+        border: 1px solid $border-card-color
+        border-radius: 20px
+        .list-group
+          .list-item
+            padding-bottom: 15px
+            &:last-child
+              padding-bottom: 0
