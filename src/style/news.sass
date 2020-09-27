@@ -1,0 +1,139 @@
+.container-fluid
+  .news__wrapper
+    margin-top: 10px
+    .news__info
+      margin: 0 15px 10px
+      .tags-1
+        padding-top: 10px
+        h6
+          padding-right: 15px
+          font-weight: 700
+      .date
+        color: $font-color-gray
+        padding-top: 10px
+    .news__content
+      h1,h3
+        margin: 0 15px 20px
+      h4
+        margin: 0 15px 10px
+      .paragraph
+        padding: 0 15px
+        display: flex
+        flex-direction: column
+        a
+          text-decoration: underline
+          text-decoration-color: $font-color-hover
+        .paragraph__text
+          font-size: 16px
+          line-height: 24px
+          margin-bottom: 30px
+        .paragraph__aside
+          font-size: 13px
+          line-height: 19px
+          margin-bottom: 30px
+        .news__notice
+          font-size: 21px
+          line-height: 34px
+        .paragraph__quote
+          background-color: $bg-card-color
+          padding: 15px
+          border: 1px solid $border-card-color
+          border-radius: 20px
+          margin-bottom: 30px
+          .paragraph__icon
+            margin-bottom: 5px
+            .icons--quote
+              stroke: $color-quote
+              stroke-width: 2px
+              fill: none
+          .paragraph__text
+            font-size: 16px
+          .paragraph__footer
+            font-weight: 600
+            font-size: 14px
+      .news__image
+        margin: 30px 0 30px
+        .text-muted
+          margin: 0 15px
+      .news__list
+        padding: 0 15px
+        margin-bottom: 30px
+        li
+          list-style-type: none
+        li:before
+          content: "— "
+      .articles-news
+        margin-bottom: 30px
+
+@media (min-width: 768px)
+  .container-fluid
+    .news__wrapper
+      margin-top: 20px
+      .news__info
+        margin: 20px 45px
+      .news__content
+        h1,h3
+          margin: 0 45px 20px
+        h4
+          margin: 0 45px 10px
+        .paragraph
+          padding: 0 45px
+          .paragraph__text
+            font-size: 18px
+            line-height: 29px
+          .news__notice
+            margin: 20px 0
+        .news__image
+          .text-muted
+            margin: 0 45px
+          .paragraph__quote
+            padding: 10px 30px 20px
+            margin: 20px 45px 0
+            .paragraph__text
+              font-size: 21px
+              line-height: 33px
+            .paragraph__footer
+              font-weight: 600
+              font-size: 16px
+        .news__list
+          padding: 0
+          margin: 0 45px 30px
+        .articles-news .article_type-3 .row
+          padding: 0
+
+@media (min-width: 1200px)
+  .container-fluid
+    .news__wrapper
+      width: 100%
+      margin-top: 0
+      .news__info
+        width: 900px
+        margin-right: auto
+      .news__content
+        width: 100%
+        h1
+          margin: 0 45px
+          width: 900px
+        .paragraph
+          width: 100%
+          flex-direction: row
+          .paragraph__text,.news__notice,.paragraph__quote
+            width: 900px
+            min-width: 900px
+            margin-right: 24px
+          .paragraph__quote
+            padding: 20px 40px
+            .paragraph__text
+              width: auto
+              min-width: auto
+            .paragraph__footer
+              margin-bottom: 20px
+        .news__image
+          display: flex
+          flex-direction: row
+          padding: 0 45px
+          img
+            margin-right: 24px
+            min-width: 900px
+          .text-muted
+            margin: 0
