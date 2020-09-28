@@ -2,6 +2,8 @@ $bg-green: #68b738
 $bg-gray: #f2f2f2
 $bg-card-color: #F9FAFA
 $bg-tag-color: #F1F4F8
+$bg-donate-color: #F2EFF5
+
 $border-card-color: #F4F6F6
 $light-gray: #444444
 $text-white: #ffffff
@@ -26,6 +28,7 @@ $color-zen: #484F58
 $color-rss: #4661BC
 $color-instagram: #DB3270
 $color-quote: #758CDA
+
 
 
 @mixin btn ()
@@ -62,3 +65,17 @@ $color-quote: #758CDA
   stroke-width: 4px
   stroke: $font-color
   fill: none
+
+@mixin text-article-quote ()
+  font-size: 18px
+  line-height: 29px
+  @media (min-width: 768px)
+    font-size: 21px
+    line-height: 34px
+
+@mixin text-main-article ()
+  font-size: 16px
+  line-height: 24px
+  @media (min-width: 768px)
+    font-size: 18px
+    line-height: 29px

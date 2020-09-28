@@ -6,13 +6,11 @@
     flex-direction: column
     padding-bottom: 40px
     .donate__header
-      .donate__title
+      h2
         margin: 0 auto
-        font-weight: 700
-        font-size: 32px
         text-align: center
     .donate__content
-      background-color: #F2EFF5
+      background-color: $bg-donate-color
       border-radius: 20px
       margin: 30px 15px 20px
       padding: 30px 20px
@@ -37,13 +35,10 @@
         opacity: 0.8
       .donate__gift
         margin: 40px auto 20px
-        text-align: center
         .gift-image
           width: 250px
         .gift-text
-          font-weight: 400
           font-size: 12px
-          text-align: center
           color: rgba(4, 4, 4, 0.4)
     .btn-donate_pay
       @include btn()
@@ -60,7 +55,6 @@
     .card-text
       font-weight: 500
       font-size: 13px
-      text-align: center
 
     .carousel
       padding: 0
@@ -106,7 +100,6 @@
           display: flex
           flex-direction: row
           flex-wrap: wrap
-
           .carousel
             order: 1
             width: 40%
