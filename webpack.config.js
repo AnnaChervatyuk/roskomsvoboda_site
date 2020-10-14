@@ -1,4 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Require  html-webpack-plugin plugin
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 module.exports = {
   entry: __dirname + "/src/app/index.js", // webpack entry point. Module to start building dependency graph
@@ -12,6 +16,15 @@ module.exports = {
   module: {
       rules: [
           {
+            test: /\.scss$/,
+            use:  [
+              'style-loader',
+              MiniCssExtractPlugin.loader,
+              'css-loader',
+              'sass-loader'
+            ]
+          },
+          {
             test: /\.js$/,
             use: 'babel-loader',
             exclude: [
@@ -19,35 +32,58 @@ module.exports = {
             ]
           },
           {
-            test: /\.(sass|scss)$/,
-            use: [{
-                loader: "style-loader" // creates style nodes from JS strings
-            }, {
-                loader: "css-loader" // translates CSS into CommonJS
-            }, {
-                loader: "sass-loader" // compiles Sass to CSS
-            }]
+            test: /\.(png|jpe?g|gif)$/,
+            use: [
+              {
+                loader: 'file-loader',
+                options: {
+                  name: '[name].[ext]',
+                  outputPath: 'dist/img/',
+                },
+              },
+            ],
           },
-
+          {
+            test: /\.svg$/i,
+            include: /.*sprite\.svg/,
+            use: [
+                {
+                    loader: 'svg-sprite-loader',
+                    options: {
+                        publicPath: '',
+                    }
+                },
+            ],
+        },
       ]
   },
-  plugins: [  // Array of plugins to apply to build chunk
+  plugins: [
+      new SpriteLoaderPlugin(),
+      new CopyWebpackPlugin({
+        patterns: [
+            { from: 'src/public/images', to: '/images' },
+            { from: 'src/public/sprite.svg', to: '/' },
+        ],
+      }),
+      new MiniCssExtractPlugin({
+        filename: 'app.css',
+      }),
       new HtmlWebpackPlugin({
           template: __dirname + "/src/public/index.html",
           inject: 'body'
       }),
-      new HtmlWebpackPlugin({ // Also generate a test.html
+      new HtmlWebpackPlugin({
         filename: 'project.html',
         template: 'src/public/project.html'
-    }),
-    new HtmlWebpackPlugin({ // Also generate a test.html
-      filename: 'cards.html',
-      template: 'src/public/cards.html'
-  }),
-  new HtmlWebpackPlugin({ // Also generate a test.html
-    filename: 'news.html',
-    template: 'src/public/news.html'
-})
+        }),
+      new HtmlWebpackPlugin({
+        filename: 'cards.html',
+        template: 'src/public/cards.html'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'news.html',
+        template: 'src/public/news.html'
+    })
   ],
 
   devServer: {  // configuration for webpack-dev-server

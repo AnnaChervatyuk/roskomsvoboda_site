@@ -1,7 +1,6 @@
 import '../style/app.scss';
-
-
-// Collapse accordion every time dropdown is shown
+import '../public/sprite.svg';
+// Collapse accoridion every time dropdown is shown
 $('.dropdown-accordion').on('show.bs.dropdown', function (event) {
   var accordion = $(this).find($(this).data('accordion'));
   accordion.find('.panel-collapse.in').collapse('hide');
