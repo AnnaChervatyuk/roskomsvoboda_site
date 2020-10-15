@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack --mode development",
     "start": "webpack-dev-server --history-api-fallback --inline --progress"
   },
   "devDependencies": {
@@ -12,6 +12,8 @@
     "babel-preset-env": "^1.7.0",
     "copy-webpack-plugin": "^6.2.1",
     "css-loader": "^4.2.2",
+    "eslint": "^7.11.0",
+    "eslint-loader": "^4.0.2",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^6.1.1",
     "gulp-sass": "^4.1.0",

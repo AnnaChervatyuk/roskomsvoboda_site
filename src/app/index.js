@@ -1,5 +1,6 @@
 import '../style/app.scss';
-import '../public/sprite.svg';
+// import '../public/sprite.svg';
+import symbol from '../public/sprite.svg';
 // Collapse accoridion every time dropdown is shown
 $('.dropdown-accordion').on('show.bs.dropdown', function (event) {
   var accordion = $(this).find($(this).data('accordion'));

@@ -8,10 +8,10 @@
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
       <link rel="stylesheet" href="app.css">
-   </head>
+   <link href="/app.css" rel="stylesheet"></head>
    <body>
       <div style="display:none">
-         <include src="sprite.svg" />
+         <include src="sprite.svg"></include>
       </div>
       <div class="container-fluid">
          <div class="navigator">
@@ -240,84 +240,52 @@
                </div>
             </div>
          </div>
-         <div class="news__wrapper d-flex flex-row">
-            <div class="news__inner">
-               <div class="news__info d-flex flex-row flex-nowrap">
+         <div class="cards__wrapper d-flex flex-row">
+            <div class="cards__inner">
+               <div class="card-article__info d-flex flex-row flex-nowrap">
                   <div class="tags-1 d-flex flex-row flex-wrap flex-grow-1">
-                     <h6>Новости</h6>
-                     <h6>Переводы</h6>
+                     <h6>Карточки</h6>
                   </div>
                   <div class="date">
                      <h6>23.12.2011</h6>
                   </div>
                </div>
-               <div class="news__content">
-                  <h1>GitHub отправил в хранилище на Шпицбергене архив открытого кода</h1>
-                  <div class="paragraph">
-                     <div class="news__notice">На днях произошла утечка персональных данных более чем 20 млн пользователей бесплатных VPN-сервисов — как такое могло произойти и стоит ли доверять VPN-сервисам?</div>
-                  </div>
-                  <div class="news__image">
-                     <img src="./images/image13.png" width="360" alt="картинка про VPN" />
-                     <small class="text-muted">Кадр из сериала «Твин Пикс» © KINOPOISK.RU</small>
-                  </div>
-                  <div class="paragraph">
-                    <div class="paragraph__text">Цифровое гражданство исходит из международного права, но в своей реализации на уровне отдельных государств опирается на национальные законы и договорное право разных стран. Его важным элементом являются так называемые цифровые права. Цифровые права — права человека, нашедшие реализацию в интернет-пространстве). Права человека постулируются в различных международных документах, таких как Всеобщая декларация прав человека и Европейской конвенции по правам человека. В российском национальном законодательстве они находят отражение в Конституции.</div>
-                    <div class="paragraph__aside"><a href="/">Как запретить распознавание лиц, если оно уже повсюду?</a></div>
-                  </div>
-                  <div class="paragraph">
-                    <div class="paragraph__text">Депутаты предлагают внести изменения в КоАП РФ, дополнив его статьей 13.41. В пояснительной записке к документу сказано, что он «разработан в целях устранения имеющегося правового пробела в сфере регулирования ответственности за неисполнение требований законодательства об информации, информационных технологиях и о защите информации».</div>
-                  </div>
-                  <div class="paragraph">
-                    <div class="paragraph__quote">
-                       <div class="paragraph__icon text-center">
-                          <svg class="icons--quote" width="60" height="45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                             <use xlink:href="sprite.svg#icon-quote"></use>
-                          </svg>
-                       </div>
-                       <div class="paragraph__text">По состоянию на апрель 2020 года выявлено порядка 20 тыс. фактов неудаления запрещенной к распространению информации». «Важно отметить, что в их числе присутствует и информация, представляющую особую общественную опасность: материалы с порнографическими изображениями несовершеннолетних; призывы к осуществлению экстремистской деятельности; информация о способах, методах разработки, изготовления и использования.</div>
-                       <div class="paragraph__footer text-right">Иванов Антон. Главный в Мегафон.</div>
+               <div class="card-article">
+                  <h1>Нужен ли мне VPN и как его выбрать?</h1>
+                  <div class="card-article__notice">На днях произошла утечка персональных данных более чем 20 млн пользователей бесплатных VPN-сервисов — как такое могло произойти и стоит ли доверять VPN-сервисам?</div>
+                  <div class="card-article__image"><img src="./images/image12.png" width="360" alt="картинка про VPN" /></div>
+                  <div class="card-article__content">
+                     <div class="card-content" id="card1">
+                        <h4 class="card-content__number text-center">1</h4>
+                        <h3 class="card-content__title text-center">Что такое «VPN» и зачем нужен такой сервис?</h3>
+                        <div class="card-content__text">
+                           <p>Если говорить кратко и максимально упрощённо, VPN для пользователей — это инструмент для построения защищённого соединения с некоторым компьютером в интернете (VPN-сервером) и сёрфинг по Сети «сквозь» этот компьютер. Таким образом все ваши действия в интернете и передаваемые данные становятся недоступны для мониторинга со стороны вашего провайдера, киберпреступников или местных спецслужб: они видят только зашифрованный трафик, а сайты, которые вы посещаете, видят не ваш IP-адрес, а адрес VPN-сервера.</p>
+                        </div>
                      </div>
-                  </div>
-                  <h3>Цифровое гражданство</h3>
-                  <div class="paragraph">
-                    <div class="paragraph__text">В Государственную думу России внесен законопроект №989758-7 «О внесении изменений в Кодекс Российской Федерации об административных правонарушениях в части установления.</div>
-                  </div>
-                  <div class="paragraph">
-                    <div class="paragraph__text">Депутаты предлагают внести изменения в <a href="/">КоАП РФ</a>, дополнив его статьей 13.41. В пояснительной записке к документу сказано, что он «разработан в целях устранения имеющегося правового пробела в сфере регулирования ответственности за неисполнение требований законодательства об информации, информационных технологиях и о защите информации».</div>
-                    <div class="paragraph__aside"><a href="/">Как запретить распознавание лиц, если оно уже повсюду?</a></div>
-                  </div>
-                  <h4>Право на информацию</h4>
-                  <ul class="news__list">
-                     <li>право на доступ к интернету;</li>
-                     <li>право на поиск, получение и передачу информации;</li>
-                     <li>право на использование, создание и публикацию цифровых произведений.</li>
-                  </ul>
-                  <div class="articles articles-news">
-                     <div class="article_type-3 article">
-                        <div class="card-columns">
-                           <div class="row no-gutters">
-                              <div class="col-md-5 col-img">
-                                 <a class="card-img__link" href="#"><img class="card-img-top" src="./images/image7.png" alt="Card image cap"></a>
-                              </div>
-                              <div class="col-md-6 col-desc">
-                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                       <a class="card-title__link" href="#">Название карточки</a>
-                                    </h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text card-text__footer"><a class="text-muted text-muted__link" href="#">Новости</a><a class="text-muted text-muted__link"  href="#">Аналитика</a><small class="text-muted">29.02</small></p>
-                                 </div>
-                              </div>
-                           </div>
+                     <div class="card-content" id="card2">
+                        <h4 class="card-content__number text-center">2</h4>
+                        <h3 class="card-content__title text-center">VPN обеспечивает полную анонимность?</h3>
+                        <div class="card-content__text">
+                           <p>Нет.</p>
+                           <p>Более того, сам VPN-сервер знает о вас всё: на какие сайты вы заходите и (иногда может знать) какими данными вы обмениваетесь с этими сайтами. Поэтому к выбору VPN-провайдера надо подходить очень внимательно.</p>
+                        </div>
+                     </div>
+                     <div class="card-content" id="card3">
+                        <h4 class="card-content__number text-center">3</h4>
+                        <h3 class="card-content__title text-center">Может ли VPN-сервис быть бесплатным?</h3>
+                        <div class="card-content__text">
+                           <p>Любой VPN-сервис — это оборудование, настройка ПО и обслуживание этой инфраструктуры (а также покупка трафика для вас). Владельцам сервисов так или иначе необходимо всё это оплачивать. И даже если вы не платите напрямую VPN-сервису, то эти деньги он получает с вас как-то иначе. </p>
+                           <p>В худшем случае бесплатный VPN-сервис будет воровать у вас логины и пароли от разных веб-сайтов, пытаться получить доступ к вашему банковскому счету, модифицировать трафик посещаемых сайтов для загрузки вирусов на компьютер. Ещё как вариант бесплатный VPN-сервис может подменять рекламу на некоторых посещаемых вами сайтах. Или же продавать информацию о вашей сетевой активности третьим лицам, например, рекламным агентствам.</p>
                         </div>
                      </div>
                   </div>
-                  <h4>Право на информацию</h4>
-                  <ul class="news__list">
-                     <li>право на доступ к интернету;</li>
-                     <li>право на поиск, получение и передачу информации;</li>
-                     <li>право на использование, создание и публикацию цифровых произведений.</li>
-                  </ul>
+               </div>
+            </div>
+            <div class="card-article__navigation d-none d-xl-table fixed sticky-top">
+               <div class="list-group">
+                  <div class="list-item">1. <a href="#card1">Что такое «VPN» и зачем нужен такой сервис?</a></div>
+                  <div class="list-item">2. <a href="#card2">VPN обеспечивает полную анонимность?</a></div>
+                  <div class="list-item">3. <a href="#card3">Может ли VPN-сервис быть бесплатным?</a></div>
                </div>
             </div>
          </div>
@@ -336,7 +304,7 @@
          </div>
          <div class="share">
             <h4>Поделитесь материалом</h4>
-            <div class="btn-group d-flex flex-row flex-wrap justify-content-start" role="group" aria-label="Basic example">
+            <div class="btn-group btn-group d-flex flex-row flex-wrap justify-content-start" role="group" aria-label="Basic example">
                <button type="button" class="btn btn-icons">
                   <svg class="icons icons--tel" width="42" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                      <use xlink:href="sprite.svg#icon-tel"></use>
@@ -530,5 +498,5 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
       <!--скрывающиеся элементы меню в планшете и десктопе-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-   </body>
+   <script src="/bundle.js"></script></body>
 </html>

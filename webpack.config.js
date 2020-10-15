@@ -61,8 +61,8 @@ module.exports = {
       new SpriteLoaderPlugin(),
       new CopyWebpackPlugin({
         patterns: [
-            { from: 'src/public/images', to: '/images' },
-            { from: 'src/public/sprite.svg', to: '/' },
+            { from: 'src/public/images', to: 'images' },
+            // { from: 'src/public/sprite.svg', to: '/' },
         ],
       }),
       new MiniCssExtractPlugin({
