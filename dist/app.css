@@ -1051,8 +1051,6 @@ h6 {
   .container-fluid .donate {
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 45px;
-    margin-right: 45px;
     padding: 0;
   }
   .container-fluid .donate .donate__content {
@@ -1192,7 +1190,7 @@ h6 {
 }
 @media (min-width: 1200px) {
   .container-fluid .contacts {
-    margin: 0 45px;
+    margin: 0;
     padding: 20px 0;
   }
   .container-fluid .contacts .contacts__content .contacts_list .contacts__address {
@@ -1267,7 +1265,7 @@ h6 {
 
 @media (min-width: 768px) {
   .container-fluid .footer {
-    padding: 20px 45px;
+    padding: 20px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
