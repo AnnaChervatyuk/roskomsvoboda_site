@@ -8,11 +8,10 @@
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
       <link rel="stylesheet" href="app.css">
-   <link href="/app.css" rel="stylesheet"></head>
    <body>
-      <div style="display:none">
-         <include src="sprite.svg"></include>
-      </div>
+      <!-- <div style="display:none"> -->
+         <!-- <include src="sprite.svg"></include> -->
+      <!-- </div> -->
       <div class="container-fluid">
          <div class="navigator">
             <div class="block__nav d-none d-md-block d-lg-block">
@@ -385,6 +384,7 @@
             </div>
             <div class="donate__content">
                <div class="donate_pay">
+                 <div class="carousel-donate" >
                   <div class="carousel btn-group-toggle" data-toggle="buttons" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
                      <label class="btn btn-donate carousel-cell active">
                      <input type="radio" name="donate" id="donate1" checked>100р
@@ -402,6 +402,7 @@
                      <input type="radio" name="donate" id="donate5">другая сумма
                      </label>
                   </div>
+                </div>
                   <div class="donate__gift text-center">
                      <img src="./images/gift1.png" class="gift-image" alt="стикеры в подарок">
                      <p class="gift-text text-center">Набор стикеров<br>в&nbsp;подарок</p>
@@ -498,5 +499,5 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
       <!--скрывающиеся элементы меню в планшете и десктопе-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-   <script src="/bundle.js"></script></body>
+   <script src="bundle.js"></script></body>
 </html>

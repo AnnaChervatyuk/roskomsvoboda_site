@@ -1,6 +1,6 @@
 import '../style/app.scss';
 // import '../public/sprite.svg';
-import symbol from '../public/sprite.svg';
+// import symbol from '../public/sprite.svg';
 // Collapse accoridion every time dropdown is shown
 $('.dropdown-accordion').on('show.bs.dropdown', function (event) {
   var accordion = $(this).find($(this).data('accordion'));
@@ -43,6 +43,7 @@ $(document).ready(function() {
         promoBanner = $(".promo-banner");
     if(windowWidth >= 1200){ //добавить или удалить класс на разных разрешениях
       promoBanner.addClass("fixed sticky-top");
+      // $('.carousel-donate').removeAttr("data-flickity")
     }
     else{
       promoBanner.removeClass("fixed sticky-top");
@@ -76,6 +77,8 @@ $(document).ready(function() {
     checkWidth(); // проверит при изменении размера окна клиента
   });
 });
+
+
 
 
 //скрывающиеся элементы меню

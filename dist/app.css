@@ -514,11 +514,11 @@ h6 {
 .container-fluid .articles .article:last-of-type {
   border-bottom: none;
 }
-.container-fluid .articles .article .promo-banner {
+.container-fluid .articles .article .article-block .promo-banner {
   padding: 40px 15px 0;
   order: 1;
 }
-.container-fluid .articles .article .promo-banner a:active {
+.container-fluid .articles .article .article-block .promo-banner a:active {
   opacity: 0.8;
 }
 .container-fluid .articles .article h2 {
@@ -588,6 +588,9 @@ h6 {
 .container-fluid .articles .article_type-3 .card-columns {
   column-count: 1;
 }
+.container-fluid .articles .article_type-3.article {
+  border-bottom: none;
+}
 .container-fluid .articles .article_type-1 .card-columns {
   column-count: 1;
 }
@@ -602,13 +605,31 @@ h6 {
 }
 .container-fluid .articles .article_type-2.article .carousel {
   padding: 0;
+  padding-bottom: 30px;
 }
 .container-fluid .articles .article_type-2.article .carousel .carousel-cell {
   width: 310px;
   padding-left: 20px;
+  height: auto;
+  min-height: 100%;
+  display: block;
 }
 .container-fluid .articles .article_type-2.article .carousel .carousel-cell:last-child {
   padding-right: 20px;
+}
+.container-fluid .articles .article_type-2.article .carousel .carousel-cell .card.card__sm {
+  height: 100%;
+  margin-bottom: 0;
+}
+.container-fluid .articles .article_type-2.article .carousel .carousel-cell .card-body {
+  display: flex;
+  flex-direction: column;
+}
+.container-fluid .articles .article_type-2.article .carousel .carousel-cell .card-body .card-text {
+  flex-grow: 1;
+}
+.container-fluid .articles .article_type-2.article .carousel .carousel-cell .card-body .card-text__footer {
+  flex-grow: 0;
 }
 .container-fluid .articles .article_type-2.article .carousel .carousel-cell .card-img-top {
   height: 175px;
@@ -663,15 +684,17 @@ h6 {
   .container-fluid .articles .article h2 {
     margin-left: 45px;
   }
-  .container-fluid .articles .article .promo-banner {
+  .container-fluid .articles .article .article-block {
+    padding: 0 15px 0;
+  }
+  .container-fluid .articles .article .article-block .promo-banner {
     order: 2;
-    margin-bottom: 60px;
     text-align: center;
     padding: 0;
     position: relative;
     overflow: hidden;
   }
-  .container-fluid .articles .article .promo-banner .promo-banner_background {
+  .container-fluid .articles .article .article-block .promo-banner .promo-banner_background {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -685,7 +708,7 @@ h6 {
     -moz-filter: blur(30px);
     -ms-filter: blur(30px);
   }
-  .container-fluid .articles .article .promo-banner img {
+  .container-fluid .articles .article .article-block .promo-banner img {
     max-height: 425px;
     width: auto;
   }
@@ -696,11 +719,12 @@ h6 {
     padding: 60px 0;
     border-bottom: 1px solid #1D1D1B;
   }
-  .container-fluid .articles .article_type-3 .row:last-child, .container-fluid .articles .article_type-2 .row:last-child {
+  .container-fluid .articles .article_type-3 .row:last-child {
     border: none;
   }
   .container-fluid .articles .article_type-3 {
     flex-direction: column;
+    padding-top: 60px;
   }
   .container-fluid .articles .article_type-3 .row .col-md-5 {
     max-width: 34%;
@@ -759,12 +783,18 @@ h6 {
   .container-fluid .articles .article_type-1 .card-columns:nth-child(even) .row .col-img img, .container-fluid .articles .article_type-4 .card-columns:nth-child(even) .row .col-img img {
     height: calc(100vw * 0.26);
   }
+  .container-fluid .articles .article_type-4 .card-columns {
+    padding: 0;
+  }
   .container-fluid .articles .article_type-4 .card-columns:nth-child(odd) .row img {
     height: calc(100vw * 0.334);
   }
   .container-fluid .articles .article_type-4 .card-columns:nth-child(odd) .row .card-body {
     padding: 34px 50px;
     background-image: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0.991353) 6.67%, rgba(255, 255, 255, 0.96449) 13.33%, rgba(255, 255, 255, 0.91834) 20%, rgba(255, 255, 255, 0.852589) 26.67%, rgba(255, 255, 255, 0.768225) 33.33%, rgba(255, 255, 255, 0.668116) 40%, rgba(255, 255, 255, 0.557309) 46.67%, rgba(255, 255, 255, 0.442691) 53.33%, rgba(255, 255, 255, 0.331884) 60%, rgba(255, 255, 255, 0.231775) 66.67%, rgba(255, 255, 255, 0.147411) 73.33%, rgba(255, 255, 255, 0.0816599) 80%, rgba(255, 255, 255, 0.03551) 86.67%, rgba(255, 255, 255, 0.0086472) 93.33%, rgba(255, 255, 255, 0) 100%);
+  }
+  .container-fluid .articles .article_type-4 .card-columns:nth-child(odd) .row .card-body .card-text {
+    width: 50%;
   }
 }
 @media (min-width: 1200px) {
@@ -778,7 +808,13 @@ h6 {
     margin-left: 0;
     margin-right: 0;
   }
-  .container-fluid .articles .article .promo-banner {
+  .container-fluid .articles .article .article-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .container-fluid .articles .article .article-block .promo-banner {
     position: sticky;
     display: block;
     width: 255px;
@@ -812,7 +848,7 @@ h6 {
     column-count: 1;
   }
   .container-fluid .articles .article_type-1 .card-columns:last-child .row {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
   .container-fluid .articles .article_type-1 .card-columns:last-child .row:last-child {
     margin-bottom: 0;
@@ -821,18 +857,22 @@ h6 {
     width: 350px;
     height: 175px;
   }
-  .container-fluid .articles .article_type-3 {
+  .container-fluid .articles .article_type-3.article {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     padding: 30px 0;
   }
-  .container-fluid .articles .article_type-3 .row {
+  .container-fluid .articles .article_type-3.article .row {
     margin: 0;
     width: 825px;
+    border-bottom: 1px solid #1D1D1B;
   }
-  .container-fluid .articles .article_type-3 .card-columns {
+  .container-fluid .articles .article_type-3.article .card-columns {
     padding: 0;
+  }
+  .container-fluid .articles .article_type-3.article .article-block:last-of-type .row:last-child {
+    border: none;
   }
   .container-fluid .articles .article_type-2.article h2 {
     margin-left: 0;
@@ -1023,9 +1063,9 @@ h6 {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .container-fluid .donate .donate__content .donate_pay .carousel {
+  .container-fluid .donate .donate__content .donate_pay .carousel-donate {
     order: 1;
-    width: 40%;
+    width: 44%;
     margin: 50px auto 0 40px;
     height: 40px;
   }

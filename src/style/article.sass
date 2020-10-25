@@ -20,11 +20,12 @@
       flex-direction: column
       &:last-of-type
         border-bottom: none
-      .promo-banner
-        padding: 40px 15px 0
-        order: 1
-        a:active
-          opacity: 0.8
+      .article-block
+        .promo-banner
+          padding: 40px 15px 0
+          order: 1
+          a:active
+            opacity: 0.8
       h2
         margin: 40px 15px 20px
       a
@@ -81,6 +82,8 @@
 
     .article_type-3 .card-columns
       column-count: 1
+    .article_type-3.article
+      border-bottom: none
 
     .article_type-1 .card-columns
       column-count: 1
@@ -91,13 +94,30 @@
 
     .article_type-2.article
         display: block
+
         .carousel
           padding: 0
+          padding-bottom: 30px
           .carousel-cell
             width: 310px
             padding-left: 20px
+            height: auto
+            min-height: 100%
+            display: block
+            // max-height: 100%
+
             &:last-child
               padding-right: 20px
+            .card.card__sm
+              height: 100%
+              margin-bottom: 0
+            .card-body
+              display: flex
+              flex-direction: column
+              .card-text
+                flex-grow: 1
+              .card-text__footer
+                flex-grow: 0
             .card-img-top
               height: 175px
             .card__sm
@@ -146,29 +166,30 @@
         padding: 0 30px
         h2
           margin-left: 45px
-        .promo-banner
-          order: 2
-          margin-bottom: 60px
-          text-align: center
-          padding: 0
-          position: relative
-          overflow: hidden
-          .promo-banner_background
-            width: 100%
-            height: 100%
-            position: absolute
-            top: 0
-            background:  no-repeat
-            background-size: cover
-            z-index: -1
-            margin: -5px -10px -10px -5px
-            filter: blur(30px)
-            -webkit-filter: blur(30px)
-            -moz-filter: blur(30px)
-            -ms-filter: blur(30px)
-          img
-            max-height: 425px
-            width: auto
+        .article-block
+          padding: 0 15px 0
+          .promo-banner
+            order: 2
+            text-align: center
+            padding: 0
+            position: relative
+            overflow: hidden
+            .promo-banner_background
+              width: 100%
+              height: 100%
+              position: absolute
+              top: 0
+              background:  no-repeat
+              background-size: cover
+              z-index: -1
+              margin: -5px -10px -10px -5px
+              filter: blur(30px)
+              -webkit-filter: blur(30px)
+              -moz-filter: blur(30px)
+              -ms-filter: blur(30px)
+            img
+              max-height: 425px
+              width: auto
 
         .card-columns
           order: 1
@@ -176,10 +197,13 @@
         .row
           padding: 60px 0
           border-bottom: 1px solid $font-color
-          &:last-child
-            border: none
+      .article_type-3
+        .row:last-child
+          border: none
+
       .article_type-3
         flex-direction: column
+        padding-top: 60px
         .row
           .col-md-5
             max-width: 34%
@@ -228,6 +252,7 @@
 
       .article_type-4
         .card-columns
+          padding: 0
           &:nth-child(odd)
             .row
               img
@@ -235,6 +260,8 @@
               .card-body
                 padding: 34px 50px
                 background-image: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0.991353) 6.67%, rgba(255, 255, 255, 0.96449) 13.33%, rgba(255, 255, 255, 0.91834) 20%, rgba(255, 255, 255, 0.852589) 26.67%, rgba(255, 255, 255, 0.768225) 33.33%, rgba(255, 255, 255, 0.668116) 40%, rgba(255, 255, 255, 0.557309) 46.67%, rgba(255, 255, 255, 0.442691) 53.33%, rgba(255, 255, 255, 0.331884) 60%, rgba(255, 255, 255, 0.231775) 66.67%, rgba(255, 255, 255, 0.147411) 73.33%, rgba(255, 255,255, 0.0816599) 80%, rgba(255, 255, 255, 0.03551) 86.67%, rgba(255, 255, 255, 0.0086472) 93.33%, rgba(255, 255, 255, 0) 100%)
+                .card-text
+                  width: 50%
 
 
 
@@ -247,14 +274,19 @@
         h2
           margin-left: 0
           margin-right: 0
-        .promo-banner
-          position: sticky
-          display: block
-          width: 255px
-          height: 425px
-          order: 2
-          margin: 60px 0
+        .article-block
+          display: flex
+          flex-direction: row
+          justify-content: space-between
           padding: 0
+          .promo-banner
+            position: sticky
+            display: block
+            width: 255px
+            height: 425px
+            order: 2
+            margin: 60px 0
+            padding: 0
         .card-columns
           order: 1
 
@@ -277,7 +309,7 @@
           &:last-child
             column-count: 1
             .row
-              margin-bottom: 60px
+              margin-bottom: 30px
               &:last-child
                 margin-bottom: 0
               .col-img
@@ -285,16 +317,21 @@
                   width: 350px
                   height: 175px
 
-      .article_type-3
+      .article_type-3.article
         display: flex
-        flex-direction: row
+        flex-direction: column
         justify-content: space-between
         padding: 30px 0
         .row
           margin: 0
           width: 825px
+          border-bottom: 1px solid $font-color
         .card-columns
           padding: 0
+        .article-block:last-of-type
+          .row:last-child
+            border: none
+
       .article_type-2.article
         h2
           margin-left: 0
