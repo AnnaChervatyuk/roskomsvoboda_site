@@ -676,6 +676,11 @@ h6 {
 }
 
 @media (min-width: 768px) {
+  .container-fluid .articles .btn-more-news {
+    margin-right: 45px;
+    margin-left: 45px;
+    width: calc(100% - 90px);
+  }
   .container-fluid .articles .article {
     display: flex;
     flex-direction: row;
@@ -833,6 +838,12 @@ h6 {
     column-count: 1;
     padding: 0;
     padding-top: 40px;
+  }
+  .container-fluid .articles .article_type-1 .card-columns:first-child .row {
+    margin-right: 30px;
+  }
+  .container-fluid .articles .article_type-1 .card-columns:first-child .row .card-body {
+    margin-right: 90px;
   }
   .container-fluid .articles .article_type-1 .card-columns:first-child .row .card-title {
     font-size: 32px;
@@ -1052,6 +1063,8 @@ h6 {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0;
+    margin-left: 45px;
+    margin-right: 45px;
   }
   .container-fluid .donate .donate__content {
     padding: 0;
@@ -1064,7 +1077,7 @@ h6 {
   .container-fluid .donate .donate__content .donate_pay .carousel-donate {
     order: 1;
     width: 44%;
-    margin: 50px auto 0 40px;
+    margin: 50px auto 0 10px;
     height: 40px;
   }
   .container-fluid .donate .donate__content .donate_pay .donate__gift {
@@ -1190,7 +1203,7 @@ h6 {
 }
 @media (min-width: 1200px) {
   .container-fluid .contacts {
-    margin: 0;
+    margin: 0 45px;
     padding: 20px 0;
   }
   .container-fluid .contacts .contacts__content .contacts_list .contacts__address {
@@ -1265,7 +1278,7 @@ h6 {
 
 @media (min-width: 768px) {
   .container-fluid .footer {
-    padding: 20px 0;
+    padding: 20px 45px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
