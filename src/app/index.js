@@ -64,10 +64,7 @@ $(document).ready(function() {
         var background = imgPromo.eq(i).attr('src')
          imgPromoBack.eq(i).css('backgroundImage', 'url(' + background + ')');
       }
-
-
     }
-
   }
 
 
@@ -161,5 +158,4 @@ $(document).ready(function () {
     });
 
 });
-
 //конец скрывающихся элементов меню

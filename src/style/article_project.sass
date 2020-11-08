@@ -1,0 +1,97 @@
+.container-fluid
+  .articles
+    .article.article_type-4
+      width: 100%
+      border: none
+      padding: 0
+      display: flex
+      flex-direction: column
+      a
+        font-weight: 700
+        font-size: 20px
+      a:hover
+        text-decoration: none
+      a:active
+        color: $font-color-hover
+        opacity: 0.8
+      .card-columns
+        border: none
+        padding: 0 15px
+        order: 2
+        column-count: 1
+        &:last-child
+          padding-bottom: 15px
+        .card
+          border: none
+          margin-bottom: 30px
+          background-color: transparent
+          .card-body
+            padding: 0
+            margin-right: 15px
+            .card-title
+              margin: 20px 0 10px
+              font-weight: 700
+            .card-text
+              margin-bottom: 10px
+              font-size: 13px
+              font-weight: 400
+              &:last-child
+                margin-bottom: 0
+        .row
+          margin: 20px 0 0
+          margin-top: 30px
+          .card-img
+            height: calc(100vw / 2.05)
+            min-height: 175px
+        .card-img-overlay
+          position: relative
+        &:nth-child(3n+1)
+          .card-img-overlay
+            padding: 0
+            position: absolute
+          .card-img
+            min-width: 330px
+            min-height: 480px
+            height: calc(100vw  * 1.334)
+          .card-body
+            margin: 0
+            padding: 15px
+            background-image: linear-gradient(360deg, rgba(255, 255, 255, 0.971353) 0%, rgba(255, 255, 255, 0.768225) 33.33%, rgba(255, 255, 255, 0) 100%)
+
+@media (min-width: 768px)
+  .container-fluid
+    .articles
+      .article.article_type-4
+        display: flex
+        flex-direction: row
+        padding: 0 15px
+        flex-wrap: wrap
+        .card-columns
+          order: 1
+          margin-bottom: 30px
+          padding: 0 15px
+          width: 50%
+          .row
+            .card-img
+              height: calc(100vw * 0.26)
+          &:nth-child(3n+1)
+            width: 100%
+            .row
+              .card-img
+                height: calc(100vw * 0.334)
+              .card-body
+                padding: 34px 50px
+                background-image: linear-gradient(360deg, rgba(255, 255, 255, 0.971353) 0%, rgba(255, 255, 255, 0.96449) 13.33%, rgba(255, 255, 255, 0.91834) 20%, rgba(255, 255, 255, 0.852589) 26.67%, rgba(255, 255, 255, 0.768225) 33.33%, rgba(255, 255, 255, 0.668116) 40%, rgba(255, 255, 255, 0.557309) 46.67%, rgba(255, 255, 255, 0.442691) 53.33%, rgba(255, 255, 255, 0.331884) 60%, rgba(255, 255, 255, 0.231775) 66.67%, rgba(255, 255, 255, 0.147411) 73.33%, rgba(255, 255, 255, 0.0816599) 80%, rgba(255, 255, 255, 0.03551) 86.67%, rgba(255, 255, 255, 0.0086472) 93.33%, rgba(255, 255, 255, 0) 100%)
+
+                .card-text
+                  width: 60%
+
+@media (min-width: 1200px)
+  .container-fluid
+    .articles
+      .article.article_type-4
+        padding: 0
+        .card-columns
+          padding: 0
+          &:nth-child(3n+2)
+            padding-right: 30px
