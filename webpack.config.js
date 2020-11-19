@@ -83,7 +83,11 @@ module.exports = {
       new HtmlWebpackPlugin({
         filename: 'news.html',
         template: 'src/public/news.html'
-    })
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'search.html',
+      template: 'src/public/search.html'
+  })
   ],
 
   devServer: {  // configuration for webpack-dev-server

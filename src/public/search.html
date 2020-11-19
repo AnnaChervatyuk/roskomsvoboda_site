@@ -8,7 +8,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
       <link rel="stylesheet" href="app.css">
-    </head>
+   </head>
    <body>
       <div class="container-fluid">
          <div class="navigator">
@@ -32,9 +32,9 @@
                       <li class="nav-item d-none d-md-block dropdown"><a href="#" id="dropdownMenuButton-news" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Новости и статьи</a>
                           <div class="block__nav dropdown-menu"  aria-labelledby="dropdownMenuButton-news">
                              <ul class="nav navbar">
-                                <li class="nav-item"><a class="nav-link" href="/">Новости</a></li>
+                                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/">Аналитика</a></li>
-                                <li class="nav-item"><a class="nav-link" href="/">Карточки</a></li>
+                                <li class="nav-item"><a class="nav-link" href="cards.html">Карточки</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/">Переводы</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/">Интервью</a></li>
                              </ul>
@@ -82,7 +82,7 @@
               </div>
            <!--конец скрывающиеся элементы меню -->
 
-            <div class="btn-group__nav">
+            <div class="btn-group__nav" id="btn-group__nav">
                <div class="btn-group " role="group" aria-label="Basic example">
                   <button type="button" class="btn btn-nav">
                      <svg class="icons icons--moon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-moon"></use></svg>
@@ -102,9 +102,9 @@
                            <div id="collapse1" class="panel-collapse collapse in">
                               <div class="block__nav">
                                  <ul class="nav navbar">
-                                    <li class="nav-item"><a class="nav-link" href="/">Новости</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
                                     <li class="nav-item"><a class="nav-link" href="/">Аналитика</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="/">Карточки</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="cards.html">Карточки</a></li>
                                     <li class="nav-item"><a class="nav-link" href="/">Переводы</a></li>
                                     <li class="nav-item"><a class="nav-link" href="/">Интервью</a></li>
                                  </ul>
@@ -213,151 +213,66 @@
           </div>
          </div>
        </div>
-       <div class="description">
-          <h1>Проекты и&nbsp;события</h1>
-          <p>Мы&nbsp;стремимся к&nbsp;тому, чтобы каждый пользователь Рунета мог защитить свои права. Для этого мы&nbsp;разрабатываем понятные для всех инструкции о&nbsp;том, как восстанавливать доступ к&nbsp;информации, даем советы, что делать, если ваш сайт оказался в&nbsp;&laquo;черном списке&raquo;, следим за&nbsp;законодательством и&nbsp;оказываем юридическую помощь.</p>
-        </div>
-        <div class="articles">
-           <div class="article_type-4 article project">
-
-             <div class="card-columns">
-                 <div class="card row no-gutters">
-                   <a class="card-title__link" href="#"><img class="card-img" src="./images/cropped-Группа-3-1.jpg" alt="Card image cap"></a>
-                   <div class="card-body card-img-overlay h-100 d-flex flex-column justify-content-end">
-                      <h5 class="card-title">
-                         <a class="card-title__link" href="#">DemHack</a>
-                      </h5>
-                      <p class="card-text ">Хакатон, организованный РосКомСвободой совместно с Теплицей социальных технологий по созданию технических решений, направленных на защиту прав и реализацию интересов граждан в цифровой среде.</p>
-                   </div>
-                 </div>
-              </div>
-
-              <div class="card-columns">
-                  <div class="card row no-gutters">
-                    <a class="card-title__link" href="#"><img class="card-img" src="./images/cropped-Группа-3-1.jpg" alt="Card image cap"></a>
-                    <div class="card-body card-img-overlay h-100 d-flex flex-column justify-content-end">
-                       <h5 class="card-title">
-                          <a class="card-title__link" href="#">DemHack</a>
-                       </h5>
-                       <p class="card-text ">Хакатон, организованный РосКомСвободой совместно с Теплицей социальных технологий по созданию технических решений, направленных на защиту прав и реализацию интересов граждан в цифровой среде.</p>
-                    </div>
-                  </div>
-               </div>
-
-
-               <div class="card-columns">
-                   <div class="card row no-gutters">
-                     <a class="card-title__link" href="#"><img class="card-img" src="./images/3618948-01-01.svg" alt="Card image cap"></a>
-                     <div class="card-body card-img-overlay h-100 d-flex flex-column justify-content-end">
-                        <h5 class="card-title">
-                          <a class="card-title__link" href="#">Pandemic Hackathon</a>
-                        </h5>
-                        <p class="card-text">Мы провели онлайн-конкурс-хакатон в рамках концепции «Цифрового гражданства» — для поддержки инновационных проектов в области здравоохранения и гражданской взаимопомощи в условиях кризиса.</p>
-                     </div>
-                   </div>
-                </div>
-
-
-               <div class="card-columns">
-                   <div class="card row no-gutters">
-                     <a class="card-title__link" href="#"><img class="card-img" src="./images/2020-10-26_00-08-22.png" alt="Card image cap"></a>
-                     <div class="card-body card-img-overlay h-100 d-flex flex-column justify-content-end">
-                        <h5 class="card-title">
-                          <a class="card-title__link" href="#">Pandemic Big Brother</a>
-                        </h5>
-                        <p class="card-text ">Пандемия создает новые возможности для Большого Брата. Мы мониторим ограничения гражданских прав, реализуемых с помощью цифровых технологий. Интерактивная карта нарушений по всему миру.</p>
-                     </div>
-                   </div>
-                </div>
-
-                <div class="card-columns">
-                    <div class="card row no-gutters">
-                      <a class="card-title__link" href="#"><img class="card-img" src="./images/safe-deposit-box-wallpaper-preview.jpg" alt="Card image cap"></a>
-                      <div class="card-body card-img-overlay h-100 d-flex flex-column justify-content-end">
-                         <h5 class="card-title">
-                           <a class="card-title__link" href="#">Проект SAFE</a>
-                         </h5>
-                         <p class="card-text">Базовые принципы информационной безопасности, советы и инструкции, как сделать свои коммуникации защищёнными</p>
-                      </div>
-                    </div>
-                 </div>
-
+         <div class="articles search">
+            <div class="search__block">
+              <input type="email" class="search__input" placeholder="Поиск">
+              <button type="button" class="btn btn-search btn-search-mob">
+                 <svg class="icons icons--search" width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-search"></use></svg>
+              </button>
+              <button type="button" class="btn btn-search btn-search-tablet">Найти</button>
+            </div>
+            <div class="article_type-3 article">
+              <div class="article-block">
                  <div class="card-columns">
-                     <div class="card row no-gutters">
-                       <a class="card-title__link" href="#"><img class="card-img" src="./images/cropped-Группа-3-1.jpg" alt="Card image cap"></a>
-                       <div class="card-body card-img-overlay h-100 d-flex flex-column justify-content-end">
-                          <h5 class="card-title">
-                            <a class="card-title__link" href="#">Privacy Day 2020</a>
-                          </h5>
-                          <p class="card-text">Ежегодная конференция, которая прошла в этот раз в онлайн-формате и была посвящена темам ограничений приватности пользователей во время пандемии» и что будет с нашими цифровыми правами после снятия режимов ограничений во время кризиса.</p>
+                    <div class="row no-gutters">
+                       <div class="col-md-5 col-img">
+                          <a class="card-img__link" href="#"><img class="card-img-top" src="./images/Snowden-VNZh.jpg" alt="Card image cap"></a>
                        </div>
-                     </div>
-                  </div>
-
-                  <div class="card-columns">
-                      <div class="card row no-gutters">
-                        <a class="card-img__link" href="#"><img class="card-img" src="./images/illustration.png" alt="Card image cap"></a>
-                        <div class="card-body card-img-overlay h-100 d-flex flex-column justify-content-end">
-                           <h5 class="card-title">
-                             <a class="card-title__link" href="#">Рейтинг соблюдения цифровых прав</a>
-                           </h5>
-                           <p class="card-text">Мы исследуем политики и практики популярных веб-сервисов Рунета по раскрытию данных взаимодействия с госорганами, а также соблюдения прав граждан на свободу информации и приватность</p>
-                        </div>
-                      </div>
-                   </div>
-
-
-                   <div class="card-columns">
-                       <div class="card row no-gutters">
-                         <a class="card-title__link" href="#"><img class="card-img" src="./images/3618948-01-01.svg" alt="Card image cap"></a>
-                         <div class="card-body card-img-overlay h-100 d-flex flex-column justify-content-end">
-                            <h5 class="card-title">
-                               <a class="card-title__link" href="#">Pandemic Hackathon</a>
-                            </h5>
-                            <p class="card-text">Мы провели онлайн-конкурс-хакатон в рамках концепции «Цифрового гражданства» — для поддержки инновационных проектов в области здравоохранения и гражданской взаимопомощи в условиях кризиса.</p>
-                         </div>
+                       <div class="col-md-6 col-desc">
+                          <div class="card-body">
+                             <h5 class="card-title">
+                                <a class="card-title__link" href="#">Эдварду Сноудену предоставлен бессрочный вид на жительство в России</a>
+                             </h5>
+                             <p class="card-text">По словам адвоката Кучерены, Сноуден мог бы получить ВНЖ и раньше, но процедура затянулась из-за пандемии</p>
+                             <p class="card-text card-text__footer"><a class="text-muted text-muted__link" href="#">Новости</a><a class="text-muted text-muted__link"  href="#">Аналитика</a><small class="text-muted">29.02</small></p>
+                          </div>
                        </div>
                     </div>
-           </div>
-        </div>
-         <div class="donate">
-            <div class="donate__header">
-               <h2>Поддержать нас</h2>
-            </div>
-            <div class="donate__content">
-               <div class="donate_pay">
-                 <div class="carousel-donate" >
-                  <div class="carousel btn-group-toggle" data-toggle="buttons" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
-                     <label class="btn btn-donate carousel-cell active">
-                     <input type="radio" name="donate" id="donate1" checked>100р
-                     </label>
-                     <label class="btn btn-donate carousel-cell">
-                     <input type="radio" name="donate" id="donate2">500р
-                     </label>
-                     <label class="btn btn-donate carousel-cell">
-                     <input type="radio" name="donate" id="donate3">1000р
-                     </label>
-                     <label class="btn btn-donate carousel-cell">
-                     <input type="radio" name="donate" id="donate4">5000р
-                     </label>
-                     <label class="btn btn-donate carousel-cell">
-                     <input type="radio" name="donate" id="donate5">другая сумма
-                     </label>
-                  </div>
-                </div>
-                  <div class="donate__gift text-center">
-                     <img src="./images/gift1.png" class="gift-image" alt="стикеры в подарок">
-                     <p class="gift-text text-center">Набор стикеров<br>в&nbsp;подарок</p>
-                  </div>
-                  <div class="donate__btn">
-                     <button type="button" class="btn btn-donate_pay">поддержать&nbsp;&rarr;</button>
-                     <p class="card-text text-center">Принимаем криптовалюту</p>
-                  </div>
+                    <div class="row no-gutters">
+                       <div class="col-md-5 col-img">
+                          <a class="card-img__link" href="#"><img class="card-img-top" src="./images/Zayavlenie-v-Sledkom-za-opravdanie-terrorisma.jpg" alt="Card image cap"></a>
+                       </div>
+                       <div class="col-md-6 col-desc">
+                          <div class="card-body">
+                             <h5 class="card-title">
+                                <a class="card-title__link" href="#">Активист попросил СК проверить высказывание двух бойцов MMA на оправдание терроризма</a>
+                             </h5>
+                             <p class="card-text">Российские бойцы смешанных единоборств Зелим Имадаев и Альберт Дураев в своих Instagram выложили посты с поддержкой Абдулака Анзорова, убившего и обезглавившего школьного учителя в пригороде Парижа, но впоследствии оба удалили публикации</p>
+                             <p class="card-text card-text__footer"><a class="text-muted text-muted__link" href="#">Новости</a><a class="text-muted text-muted__link"  href="#">Аналитика</a><small class="text-muted">29.02</small></p>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="row no-gutters">
+                       <div class="col-md-5 col-img">
+                          <a class="card-img__link" href="#"><img class="card-img-top" src="./images/raspoznavanie-v-obsh-trans-Msk.jpg" alt="Card image cap"></a>
+                       </div>
+                       <div class="col-md-6 col-desc">
+                          <div class="card-body">
+                             <h5 class="card-title">
+                                <a class="card-title__link" href="#">Москва оснастит электробусы и трамваи камерами с распознаванием лиц</a>
+                             </h5>
+                             <p class="card-text">До Нового года на оснащение наземного транспорта столичные власти потратят более четверти миллиарда рублей</p>
+                             <p class="card-text card-text__footer"><a class="text-muted text-muted__link" href="#">Новости</a><a class="text-muted text-muted__link"  href="#">Аналитика</a><small class="text-muted">29.02</small></p>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
                </div>
-            </div>
-            <button type="button" class="btn btn-about_donate" >Почему мы просим поддержки&nbsp;&rarr;</button>
          </div>
-         <div class="contacts">
+         <button type="button" class="btn btn-more-news">Показать еще</button>
+       </div>
+
+         <div class="contacts contacts-search">
             <div class="contacts__content">
                <h5>Контакты</h5>
                <div class="contacts_list">
@@ -444,5 +359,6 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 
-   <script src="bundle.js"></script></body>
+
+   </body>
 </html>
