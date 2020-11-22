@@ -15,7 +15,56 @@
            <div class="block__nav d-none d-md-block d-lg-block">
              <div class="block__nav-social">
                 <div class="item-social social-desc " id="social-desc">
-                  <!-- враппер для соц.сетей, их верстка ниже id="social-mob" -->
+                       <div class="btn-social d-flex flex-wrap justify-content-center w-100" role="group" aria-label="Basic example" id="btn-social-group">
+                          <a type="button" class="btn" href="/">
+                             <svg class="icons icons--tel" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-tel"></use></svg>
+                          </a>
+                           <a type="button" class="btn" href="/">
+                             <svg class="icons icons--fb" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-fb"></use></svg>
+                          </a>
+                           <a type="button" class="btn" href="/">
+                             <svg class="icons icons--vk" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-vk"></use></svg>
+                          </a>
+                           <a type="button" class="btn" href="/">
+                             <svg class="icons icons--twitter" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-twitter"></use></svg>
+                          </a>
+
+                         <div class="dropdown more-social" id="more-social_drpdwn">
+                           <button class="btn  dropdown-toggle" type="button" id="dropdownMenu-social" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             <svg class="icons icons--more_horiz" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-more_horiz"></use></svg>
+                           </button>
+                           <div class="dropdown-menu more-social__menu" id="more-social" aria-labelledby="dropdownMenu2">
+                             <div class="block__nav">
+                               <ul class="nav navbar">
+                                  <li class="nav-item" id="btn-zen__item">
+                                     <a type="button" class="btn" href="/" id="btn-zen">
+                                        <svg class="icons icons--zen" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-zen"></use></svg>
+                                        <span>Дзен</span>
+                                     </a>
+                                  </li>
+                                  <li class="nav-item" id="btn-inst__item">
+                                     <a type="button" class="btn" href="/" id="btn-inst">
+                                        <svg class="icons icons--instagram" width="31" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-instagram"></use></svg>
+                                        <span>Инстаграмм</span>
+                                     </a>
+                                  </li>
+                                  <li class="nav-item" id="btn-youtube__item">
+                                     <a type="button" class="btn" href="/" id="btn-youtube">
+                                        <svg class="icons icons--youtube" width="31" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-youtube"></use></svg>
+                                        <span>YouTube</span>
+                                     </a>
+                                  </li>
+                                  <li class="nav-item" id="btn-rss__item">
+                                     <a type="button" class="btn" href="/"  id="btn-rss">
+                                        <svg class="icons icons--rss" width="27" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-rss"></use></svg>
+                                        <span>RSS</span>
+                                     </a>
+                                  </li>
+                               </ul>
+                             </div>
+                           </div>
+                         </div>
+                    </div>
                 </div>
                 <div class="btn-group btn-group-donate" role="group" aria-label="Basic example">
                    <button type="button" class="btn btn-help">Нужна юр.помощь?</button>
@@ -25,62 +74,30 @@
             </div>
 
             <div class="block__nav block__nav-category">
-                <!--начало скрывающиеся элементы меню -->
                 <div class="twelve columns filter-wrapper">
-                  <ul class="nav-bar-filter" id="nav-bar-filter">
-                      <li class="nav-item nav-item__logo"><a class="nav-link nav-link__logo" href="/"><img src="./images/logo.svg" width="158" height="18" alt="Роскомсвобода"></a></li>
+                  <ul class="nav-bar-logo" id="nav-bar-logo">
+                      <li class="nav-item nav-item__logo"><a class="nav-link nav-link__logo" href="/"><img src="./images/logo.svg" width="151" height="17" alt="Роскомсвобода"></a></li>
+                  </ul>
+                  <ul class="nav-bar-filter nav-bar-filter-menu" id="nav-bar-filter">
                       <li class="nav-item d-none d-md-block dropdown"><a href="#" id="dropdownMenuButton-news" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Новости и статьи</a>
-                          <div class="block__nav dropdown-menu"  aria-labelledby="dropdownMenuButton-news">
-                             <ul class="nav navbar">
-                                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                                <li class="nav-item"><a class="nav-link" href="/">Аналитика</a></li>
-                                <li class="nav-item"><a class="nav-link" href="cards.html">Карточки</a></li>
-                                <li class="nav-item"><a class="nav-link" href="/">Переводы</a></li>
-                                <li class="nav-item"><a class="nav-link" href="/">Интервью</a></li>
-                             </ul>
+                          <div class="block__nav dropdown-menu"  aria-labelledby="dropdownMenuButton-news" id="list-news_desc">
+                             <!-- блок для подразделов новостей, копируется с мобилы -->
                           </div>
                       </li>
                       <li class="nav-item d-none d-md-block dropdown"><a href="#" id="dropdownMenuButton-monitoring" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мониторинг реестров</a>
-                        <div class="block__nav dropdown-menu"  aria-labelledby="dropdownMenuButton-monitoring">
-                          <ul class="nav navbar">
-                             <li class="nav-item"><a class="nav-link" href="/">Реестр запрещенных сайтов</a></li>
-                             <li class="nav-item"><a class="nav-link" href="/">Реестр организаторов распространения информации</a></li>
-                             <li class="nav-item"><a class="nav-link" href="/">Реестр новостных агрегаторов</a></li>
-                             <li class="nav-item"><a class="nav-link" href="/">Статистика блокировок</a></li>
-                          </ul>
+                        <div class="block__nav dropdown-menu"  aria-labelledby="dropdownMenuButton-monitoring" id="list-monitoring_desc">
+                          <!-- блок для подразделов мониторинга, копируется с мобилы -->
                         </div>
                       </li>
                       <li class="nav-item d-none d-md-block dropdown"><a href="#" id="dropdownMenuButton-work" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Наша работа</a>
-                        <div class="block__nav dropdown-menu"  aria-labelledby="dropdownMenuButton-work">
-                          <ul class="nav navbar">
-                             <li class="nav-item"><a class="nav-link" href="project.html">Проекты и&nbsp;события</a></li>
-                             <li class="nav-item"><a class="nav-link" href="/">Ссылка 2</a></li>
-                             <li class="nav-item"><a class="nav-link" href="/">Ссылка 3</a></li>
-                             <li class="nav-item"><a class="nav-link" href="/">Ссылка 4</a></li>
-                          </ul>
+                        <div class="block__nav dropdown-menu"  aria-labelledby="dropdownMenuButton-work" id="list-work_desc">
+                            <!-- блок для подразделов работы, копируется с мобилы -->
                         </div>
                       </li>
                       <li class="nav-item d-none d-md-block"><a href="#">О нас</a></li>
                       <li class="nav-item d-none d-md-block"><a class="nav-link nav-link__logo" href="#"><img src="./images/demhack.png" width="90" height="12" alt="demhack"></a></li>
                   </ul>
-
-                  <div class="dropdown dropdown__more-nav-popup">
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton-nav_popup">
-                       <ul class="more-nav-popup" id="more-nav-popup">
-                         <li>
-                           <ul class="subfilter nav navbar">
-                           </ul>
-                         </li>
-                       </ul>
-                    </div>
-                    <button type="button" class="btn dropdown-toggle btn-more-nav-popup d-none d-md-block" id="dropdownMenuButton-nav_popup" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <svg class="icons icons--more_horiz" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-more_horiz"></use></svg>
-                    </button>
-                  </div>
-
-
               </div>
-           <!--конец скрывающиеся элементы меню -->
 
             <div class="btn-group__nav" id="btn-group__nav">
                <div class="btn-group " role="group" aria-label="Basic example">
@@ -100,7 +117,7 @@
                               <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Новости и статьи</a>
                            </div>
                            <div id="collapse1" class="panel-collapse collapse in">
-                              <div class="block__nav">
+                              <div class="block__nav" id="list-news_mob">
                                  <ul class="nav navbar">
                                     <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
                                     <li class="nav-item"><a class="nav-link" href="/">Аналитика</a></li>
@@ -116,7 +133,7 @@
                               <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Мониторинг реестров</a>
                            </div>
                            <div id="collapse2" class="panel-collapse collapse in">
-                              <div class="block__nav">
+                              <div class="block__nav" id="list-monitoring_mob">
                                  <ul class="nav navbar">
                                     <li class="nav-item"><a class="nav-link" href="/">Реестр запрещенных сайтов</a></li>
                                     <li class="nav-item"><a class="nav-link" href="/">Реестр организаторов распространения информации</a></li>
@@ -131,7 +148,7 @@
                               <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Наша работа</a>
                            </div>
                            <div id="collapse3" class="panel-collapse collapse in">
-                              <div class="block__nav">
+                              <div class="block__nav"  id="list-work_mob">
                                  <ul class="nav navbar">
                                     <li class="nav-item"><a class="nav-link" href="project.html">Проекты и события</a></li>
                                     <li class="nav-item"><a class="nav-link" href="/">Ссылка 2</a></li>
@@ -157,57 +174,8 @@
                         <button type="button" class="btn btn-help">Нужна юр.помощь?</button>
                      </div>
                      <div class="dropdown-item item-social social-mob" id="social-mob">
-                        <div class="btn-group btn-social" role="group" aria-label="Basic example">
-                           <button type="button" class="btn">
-                              <svg class="icons icons--tel" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-tel"></use></svg>
-                           </button>
-                           <button type="button" class="btn">
-                              <svg class="icons icons--fb" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-fb"></use></svg>
-                           </button>
-                           <button type="button" class="btn">
-                              <svg class="icons icons--vk" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-vk"></use></svg>
-                           </button>
-                           <button type="button" class="btn">
-                              <svg class="icons icons--twitter" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-twitter"></use></svg>
-                           </button>
-                           <div class="btn-group dropleft more-social">
-                              <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                 <svg class="icons icons--more_horiz" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-more_horiz"></use></svg>
-                              </button>
-                              <div class="dropdown-menu more-social__menu" id="more-social">
-                                 <div class="block__nav">
-                                    <ul class="nav navbar">
-                                       <li class="nav-item">
-                                          <button type="button" class="btn">
-                                             <svg class="icons icons--zen" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-zen"></use></svg>
-                                          </button>
-                                          <a class="nav-link" href="/">Дзен</a>
-                                       </li>
-                                       <li class="nav-item">
-                                          <button type="button" class="btn">
-                                             <svg class="icons icons--instagram" width="31" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-instagram"></use></svg>
-                                          </button>
-                                          <a class="nav-link" href="/">Инстаграмм</a>
-                                       </li>
-                                       <li class="nav-item">
-                                          <button type="button" class="btn">
-                                             <svg class="icons icons--youtube" width="31" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-youtube"></use></svg>
-                                          </button>
-                                          <a class="nav-link" href="/">YouTube</a>
-                                       </li>
-                                       <li class="nav-item">
-                                          <button type="button" class="btn">
-                                             <svg class="icons icons--rss" width="27" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-rss"></use></svg>
-                                          </button>
-                                          <a class="nav-link" href="/">RSS</a>
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </div>
-                           <!-- </div> -->
-                        </div>
+                       <!-- блок для соц сетей, копируется с десктопа -->
                      </div>
-                  </div>
                </div>
             </div>
           </div>
@@ -491,7 +459,7 @@
                <a class="nav-link__logo-copyright" href="/"><img src="./images/logo_creative.png" alt="Время менять копирайт"></a>
                <a class="nav-link__logo-unisender" href="/"><img src="./images/logo_uniSender.png" alt="UniSender"></a>
             </div>
-            <div class="btn-group btn-footer d-flex justify-content-between" role="group" aria-label="Basic example">
+            <div class="btn-group btn-footer d-flex justify-content-between" role="group" aria-label="Basic example" id="btn-footer">
                <button type="button" class="btn">
                   <svg class="icons icons--tel" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                      <use xlink:href="sprite.svg#icon-tel"></use>
@@ -539,7 +507,7 @@
 
       <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> <!--горизонатльынй скролл блока Наша работа -->
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>   <!--скрывающиеся элементы меню в планшете и десктопе-->
+    <!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  скрывающиеся элементы меню в планшете и десктопе-->
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> <!--всплывающее окно, например, меню мобилы-->
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
