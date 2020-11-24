@@ -35,6 +35,7 @@ $('#mobile-menu').click(function() {
 $(document).ready(function() {
   var menu = $("#nav-bar-filter");
   var parent = $(".filter-wrapper");
+  var compileDescMenu = false;
 
 //скрывающиеся элементы меню
 function checkWidthMenu(){
@@ -51,7 +52,8 @@ function checkWidthMenu(){
         btnSocial = $(".btn-footer"),
         divPromo = $(".promo-banner"),
         imgPromo = $(".promo-banner>a>img"),
-        imgPromoBack = $(".promo-banner_background");
+        imgPromoBack = $(".promo-banner_background"),
+        blockMenuWork = $("#list-work_mob");
 
     if(windowWidth >= 1200){ //добавить или удалить класс на разных разрешениях
       promoBanner.addClass("fixed sticky-top");
@@ -72,6 +74,12 @@ function checkWidthMenu(){
     }
 
     if(windowWidth >= 768){ // перемещние блока с соц.сетями в навигатор
+      if (!compileDescMenu) {
+        $('<ul class="nav navbar list-work list-work-without-bg"></ul>').appendTo($("#list-work_mob"));
+        $("#list-work_mob>.list-work>.without-bg").appendTo( $('.list-work-without-bg'));
+        compileDescMenu = true;
+      }
+
       $('#social-mob>div').appendTo( $('#social-desc') );
       $('#list-news_mob>ul').appendTo( $('#list-news_desc') );
       $('#list-monitoring_mob>ul').appendTo( $('#list-monitoring_desc') );
@@ -85,11 +93,12 @@ function checkWidthMenu(){
       $('#btn-youtube>span').css('display','inline');
       $('#btn-rss').appendTo($('#btn-rss__item'));
       $('#btn-rss>span').css('display','inline');
+
     } else {
       $('#social-desc>div').appendTo( $('#social-mob') );
       $('#list-monitoring_desc>ul').appendTo( $('#list-monitoring_mob') );
-      $('#list-work_mob>ul').appendTo( $('#list-work_desc') );
-      $('#list-news_mob>ul').appendTo( $('#list-news_mob') );
+      $('#list-work_desc>ul').appendTo( $('#list-work_mob') );
+      $('#list-news_desc>ul').appendTo( $('#list-news_mob') );
       $('#more-social_drpdwn').css('display','none');
       $('#btn-zen').appendTo($('#btn-social-group'));
       $('#btn-zen>span').css('display','none');

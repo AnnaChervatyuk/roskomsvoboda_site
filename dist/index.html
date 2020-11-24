@@ -8,7 +8,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
       <link rel="stylesheet" href="app.css">
-   </head>
+   <link href="/app.css" rel="stylesheet"></head>
    <body>
       <div class="container-fluid">
          <div class="navigator">
@@ -90,7 +90,7 @@
                         </div>
                       </li>
                       <li class="nav-item d-none d-md-block dropdown"><a href="#" id="dropdownMenuButton-work" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Наша работа</a>
-                        <div class="block__nav dropdown-menu"  aria-labelledby="dropdownMenuButton-work" id="list-work_desc">
+                        <div class="block__nav dropdown-menu dropdown-menu-right list-work_desc"  aria-labelledby="dropdownMenuButton-work" id="list-work_desc">
                             <!-- блок для подразделов работы, копируется с мобилы -->
                         </div>
                       </li>
@@ -148,12 +148,13 @@
                               <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Наша работа</a>
                            </div>
                            <div id="collapse3" class="panel-collapse collapse in">
-                              <div class="block__nav"  id="list-work_mob">
-                                 <ul class="nav navbar">
-                                    <li class="nav-item"><a class="nav-link" href="project.html">Проекты и события</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="/">Ссылка 2</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="/">Ссылка 3</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="/">Ссылка 4</a></li>
+                              <div class="block__nav list-work_mob" id="list-work_mob">
+                                 <ul class="nav navbar list-work">
+                                    <li class="nav-item with-bg"><a class="nav-link" href="project.html"><span class="nav-item__title">Проекты и события</span><div class="nav-item__description"><span>15 проектов</span><span>+1 новый</span></div></a></li>
+                                    <li class="nav-item with-bg"><a class="nav-link" href="project.html"><span class="nav-item__title">Общественные кампании</span><div class="nav-item__description"><span>описание описание описание описаниеоп исаниеописа ниеописан иеописан иеопис аниеописание описание</span></div></a></li>
+                                    <li class="nav-item with-bg"><a class="nav-link" href="project.html"><span class="nav-item__title">Юридическая практика</span></a></li>
+                                    <li class="nav-item without-bg"><a class="nav-link" href="project.html"><span class="nav-item__title">Проекты и события без фоновой картинки</span></a></li>
+                                    <li class="nav-item without-bg"><a class="nav-link" href="project.html"><span class="nav-item__title">Ссылка без фоновой картинки</span></a></li>
                                  </ul>
                               </div>
                            </div>
@@ -513,5 +514,5 @@
 
 
 
-   <script src="bundle.js"></script></body>
+   <script src="/bundle.js"></script></body>
 </html>
