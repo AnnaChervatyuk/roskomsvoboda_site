@@ -46,6 +46,16 @@ function checkWidthMenu(){
     }
   }
 
+  function checkPosition(){
+    console.log("checkPosition", $('.has-megamenu').offset().top)
+    if ($('.has-megamenu').offset().top > 90){
+      console.log($('.has-megamenu').offset().top)
+      $('#list-work_desc').css('margin-top', '100px')
+    } else {
+      $('#list-work_desc').css('margin-top', '58px')
+    }
+  }
+
   function checkWidth() {
     var windowWidth = $('body').innerWidth(),
         promoBanner = $(".promo-banner"),
@@ -114,9 +124,11 @@ function checkWidthMenu(){
 
   checkWidthMenu() // меню плнашет и десктоп
   checkWidth(); // проверит при загрузке страницы
+  checkPosition() // высота меню - двигать или нет попап
 
   $(window).on("resize", function (e) {
     checkWidth(); // проверит при изменении размера окна клиента
     checkWidthMenu() //меню плнашет и десктоп
+    checkPosition()// высота меню - двигать или нет попап
   });
 });
