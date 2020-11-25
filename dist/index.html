@@ -395,7 +395,7 @@
             </div>
             <div class="donate__content">
                <div class="donate_pay">
-                 <div class="carousel-donate" >
+                 <div class="carousel-donate">
                     <div class="carousel btn-group-toggle " data-toggle="buttons" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
                        <label class="btn btn-donate carousel-cell active">
                        <input type="radio" name="donate" id="donate1" checked>100р
@@ -413,7 +413,19 @@
                        <input type="radio" name="donate" id="donate5">другая сумма
                        </label>
                     </div>
+                    <div class="donate__frequency">
+                      <div class="donate__input">
+                        <input class="donate__check" type="radio" name="radio" id="radio_monthly" value="monthly" checked>
+                        <label class="donate__label" for="radio_monthly">Ежемесячно</label>
+                      </div>
+                      <div class="donate__input">
+                        <input class="donate__check" type="radio" name="radio" id="radio_oneTime" value="one-time">
+                        <label class="donate__label" for="radio_oneTime">Разово</label>
+                      </div>
+                    </div>
                   </div>
+
+
                   <div class="donate__gift text-center">
                      <img src="./images/gift1.png" class="gift-image" alt="стикеры в подарок">
                      <p class="gift-text text-center">Набор стикеров<br>в&nbsp;подарок</p>

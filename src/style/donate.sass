@@ -40,6 +40,38 @@
         .gift-text
           font-size: 12px
           color: rgba(4, 4, 4, 0.4)
+      .donate__frequency
+        display: flex
+        margin: 30px 0
+        justify-content: center
+        .donate__input
+          margin: 0 15px
+          display: inline-block
+        .donate__input input[type=radio]
+          display: none
+        .donate__input input[type=radio] + label::before
+          content: ""
+          display: inline-block
+          width: 20px
+          height: 20px
+          border-radius: 10px
+          position: absolute
+          left: 0
+          bottom: 1px
+          background: #FFFFFF
+          border: 2px solid #1D1D1B
+
+        .donate__input:hover label::before,
+        .donate__input input[type=radio]:checked + label::before
+          background: #FFFFFF
+          border: 7px solid $font-color-hover
+
+        .donate__input label
+          cursor: pointer
+          position: relative
+          padding-left: 25px
+          display: inline-block
+
     .btn-donate_pay
       @include btn()
       margin: 20px 0
@@ -109,15 +141,22 @@
             order: 2
             margin: 0
             padding: 0
+            margin-top: 20px
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
           .donate__btn
             display: flex
             flex-direction: row
             order: 3
             width: 100%
             align-items: center
-            margin: -40px 0 50px 40px
+            margin: -35px 0 50px 40px
             .btn-donate_pay
               width: auto
               padding: 0 20px
               margin: 0
               margin-right: 32px
+        .donate__frequency
+          margin-left: 14px
+          justify-content: flex-start

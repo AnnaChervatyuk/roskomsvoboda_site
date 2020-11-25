@@ -1076,6 +1076,41 @@ h6 {
   font-size: 12px;
   color: rgba(4, 4, 4, 0.4);
 }
+.container-fluid .donate .donate__content .donate__frequency {
+  display: flex;
+  margin: 30px 0;
+  justify-content: center;
+}
+.container-fluid .donate .donate__content .donate__frequency .donate__input {
+  margin: 0 15px;
+  display: inline-block;
+}
+.container-fluid .donate .donate__content .donate__frequency .donate__input input[type=radio] {
+  display: none;
+}
+.container-fluid .donate .donate__content .donate__frequency .donate__input input[type=radio] + label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background: #FFFFFF;
+  border: 2px solid #1D1D1B;
+}
+.container-fluid .donate .donate__content .donate__frequency .donate__input:hover label::before,
+.container-fluid .donate .donate__content .donate__frequency .donate__input input[type=radio]:checked + label::before {
+  background: #FFFFFF;
+  border: 7px solid #4661BC;
+}
+.container-fluid .donate .donate__content .donate__frequency .donate__input label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  display: inline-block;
+}
 .container-fluid .donate .btn-donate_pay {
   border: 2px solid #1D1D1B;
   padding: 0;
@@ -1189,6 +1224,10 @@ h6 {
     order: 2;
     margin: 0;
     padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   .container-fluid .donate .donate__content .donate_pay .donate__btn {
     display: flex;
@@ -1196,13 +1235,17 @@ h6 {
     order: 3;
     width: 100%;
     align-items: center;
-    margin: -40px 0 50px 40px;
+    margin: -35px 0 50px 40px;
   }
   .container-fluid .donate .donate__content .donate_pay .donate__btn .btn-donate_pay {
     width: auto;
     padding: 0 20px;
     margin: 0;
     margin-right: 32px;
+  }
+  .container-fluid .donate .donate__content .donate__frequency {
+    margin-left: 14px;
+    justify-content: flex-start;
   }
 }
 .container-fluid .contacts {
