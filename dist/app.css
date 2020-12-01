@@ -273,9 +273,11 @@ h6 {
 .container-fluid .navigator .dropdown-menu.mobail-menu.show .dropdown-item.panel-group.dropdown-accordion .panel.panel-default .navbar .nav-item {
   margin: 10px 0;
   white-space: pre-wrap;
+  line-height: 0;
 }
 .container-fluid .navigator .dropdown-menu.mobail-menu.show .dropdown-item.panel-group.dropdown-accordion .panel.panel-default a {
   color: #1D1D1B;
+  line-height: 22.5px;
 }
 .container-fluid .navigator .dropdown-menu.mobail-menu.show .dropdown-item.panel-group.dropdown-accordion .panel.panel-default a:hover {
   color: #4661BC;

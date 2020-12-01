@@ -15,27 +15,26 @@ $('.dropdown-accordion').on('click', 'a[data-toggle="collapse"]', function (even
 })
 
 // открыть доп.соцети в выпадающем меню на моб
-$('.dropleft').on('click', 'button[data-toggle="dropdown"]', function (event) {
-  event.preventDefault();
-  event.stopPropagation();
-})
-
-
-$('#mobile-menu').click(function() {
-  if ($("#mobile-menu").attr('class') == 'icons icons--menu') {
-    $("#mobile-menu").attr("class", "icons icons--close");
-    $("#mobile-menu use").attr("xlink:href", "./images/sprite.svg#icon-close");
-  } else {
-    $("#mobile-menu").attr("class", "icons icons--menu");
-    $("#mobile-menu use").attr("xlink:href", "./images/sprite.svg#icon-menu");
-  }
-});
-
+// $('.dropleft').on('click', 'button[data-toggle="dropdown"]', function (event) {
+//   event.preventDefault();
+//   event.stopPropagation();
+// })
 
 $(document).ready(function() {
   var menu = $("#nav-bar-filter");
   var parent = $(".filter-wrapper");
   var compileDescMenu = false;
+
+  //кнопка меню на мобиле
+  function chooseBtnIcon() {
+    if ($("#mobail-menu").hasClass("show")) {
+      $("#mobile-menu").attr("class", "icons icons--menu");
+      $("#mobile-menu use").attr("xlink:href", "./images/sprite.svg#icon-menu");
+    } else {
+      $("#mobile-menu").attr("class", "icons icons--close");
+      $("#mobile-menu use").attr("xlink:href", "./images/sprite.svg#icon-close");
+    }
+  }
 
 //скрывающиеся элементы меню
 function checkWidthMenu(){
@@ -47,9 +46,7 @@ function checkWidthMenu(){
   }
 
   function checkPosition(){
-    console.log("checkPosition", $('.has-megamenu').offset().top)
     if ($('.has-megamenu').offset().top > 90){
-      console.log($('.has-megamenu').offset().top)
       $('#list-work_desc').css('margin-top', '100px')
     } else {
       $('#list-work_desc').css('margin-top', '58px')
@@ -130,5 +127,11 @@ function checkWidthMenu(){
     checkWidth(); // проверит при изменении размера окна клиента
     checkWidthMenu() //меню плнашет и десктоп
     checkPosition()// высота меню - двигать или нет попап
+  });
+  $('#mobile-menu').on("click", function () {
+    chooseBtnIcon()
+  })
+  $(".container-fluid").on("click", function () {
+    chooseBtnIcon()
   });
 });
