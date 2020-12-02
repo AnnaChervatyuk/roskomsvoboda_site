@@ -2143,3 +2143,119 @@ h6 {
     display: block;
   }
 }
+.container-fluid .form {
+  background-color: #F5F5F4;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 15px;
+  font-size: 13px;
+  line-height: 19px;
+}
+.container-fluid .form .form__el {
+  display: flex;
+  flex-direction: column;
+}
+.container-fluid .form .form__el span {
+  margin-bottom: 5px;
+}
+.container-fluid .form .form__el .form__input {
+  border: 2px solid #1D1D1B;
+  padding: 0;
+  height: 27px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 8px 16px;
+  height: 40px;
+}
+.container-fluid .form .form__el .form__input:hover {
+  color: #4661BC;
+  border-color: #4661BC;
+}
+.container-fluid .form .form__el .form__input:active {
+  color: #4661BC;
+  border-color: #4661BC;
+  opacity: 0.8;
+}
+.container-fluid .form .form__el .form__input:focus {
+  box-shadow: none;
+}
+.container-fluid .form .form__el .form__input:active, .container-fluid .form .form__el .form__input:focus {
+  border-color: #B61414;
+}
+.container-fluid .form .form__el .form__input.help {
+  height: 340px;
+  margin-bottom: 10px;
+}
+.container-fluid .form .form__el .form__input.error {
+  border-color: #B61414;
+}
+.container-fluid .form .form__el.surname,
+.container-fluid .form .form__el.name {
+  margin-bottom: 10px;
+}
+.container-fluid .form .btn-send {
+  border: 2px solid #1D1D1B;
+  padding: 0;
+  height: 27px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 13px;
+  width: 100%;
+  margin-top: 10px;
+  height: 40px;
+  padding: 8px 16px;
+}
+.container-fluid .form .btn-send:hover {
+  color: #4661BC;
+  border-color: #4661BC;
+}
+.container-fluid .form .btn-send:active {
+  color: #4661BC;
+  border-color: #4661BC;
+  opacity: 0.8;
+}
+.container-fluid .form .btn-send:focus {
+  box-shadow: none;
+}
+.container-fluid .form-sended {
+  display: flex;
+  flex-direction: column;
+}
+.container-fluid .form-sended .icons-send {
+  fill: #1D1D1B;
+  margin-right: 20px;
+  margin-top: -5px;
+}
+
+@media (min-width: 768px) {
+  .container-fluid .form {
+    padding: 40px 55px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 15px 45px;
+  }
+  .container-fluid .form .form__el {
+    width: 49%;
+  }
+  .container-fluid .form .form__el.message {
+    width: 100%;
+  }
+  .container-fluid .form .btn-send {
+    width: auto;
+    min-width: 140px;
+  }
+  .container-fluid .form-sended {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 1200px) {
+  .container-fluid .form {
+    margin: 15px auto;
+    max-width: 825px;
+  }
+}

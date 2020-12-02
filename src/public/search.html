@@ -272,6 +272,35 @@
          <button type="button" class="btn btn-more-news">Показать еще</button>
        </div>
 
+       <div class="form">
+         <div class="form__el message">
+           <span>Сообщение</span>
+           <textarea class="form__input help" placeholder="Чем вам помочь?"></textarea>
+         </div>
+         <div class="form__el name">
+           <span>Имя</span>
+           <input type="text" class="form__input" placeholder="Имя и фамилия">
+         </div>
+         <div class="form__el surname">
+           <span>Email для ответа</span>
+           <input type="email" class="form__input">
+         </div>
+
+         <button type="submit" class="btn btn-send">Отправить</button>
+       </div>
+
+       <div class="form form-sended">
+         <svg class="icons-send" width="36" height="35" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use xlink:href="sprite.svg#icon-send"></use>
+         </svg>
+
+         <div class="sended">
+           <h3>Сообщение отправлено</h3>
+           <p>Мы&nbsp;постараемся ответить как можно быстрее, обычно это занимает до&nbsp;пяти дней</p>
+           <button type="submit" class="btn btn-send">Отправить ещё одно</button>
+         </div>
+       </div>
+
          <div class="contacts contacts-search">
             <div class="contacts__content">
                <h5>Контакты</h5>
