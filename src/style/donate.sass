@@ -116,6 +116,14 @@
         order: 3
         width: 100%
         margin: 20px 0
+      .donate__btn
+        display: flex
+        flex-direction: column
+        .btn-donate_pay
+          width: auto
+          padding: 0 20px
+          margin: 0 auto
+          margin-bottom: 20px
 
 
 @media (min-width: 1200px)
@@ -128,10 +136,13 @@
       margin-right: 45px
       .donate__content
         padding: 0
+        height: 320px
         .donate_pay
           display: flex
           flex-direction: row
           flex-wrap: wrap
+          position: relative
+          height: 100%
           .carousel-donate
             order: 1
             width: 44%
@@ -141,28 +152,35 @@
             order: 2
             margin: 0
             padding: 0
-            margin-top: 20px
+            // margin-top: 20px
             display: flex
             flex-direction: column
             justify-content: flex-start
-            // img
-            //   height: 310px
-            //   width: auto
-            //   object-fit: contain
-            // .gift-text
-            //   margin-bottom: 0
+
+            position: absolute
+            margin: 0
+            right: 40px
+            top: 0
+            height: 100%
+            img
+              height: 300px
+              width: auto
+              object-fit: contain
+            .gift-text
+              margin-bottom: 0
+              margin-top: -10px
+
           .donate__btn
-            display: flex
             flex-direction: row
             order: 3
             width: 100%
             align-items: center
-            margin: -35px 0 50px 40px
+            margin: auto 0 50px 40px
             .btn-donate_pay
-              width: auto
-              padding: 0 20px
-              margin: 0
-              margin-right: 32px
+                margin: 0
+                margin-right: 32px
+          //     width: auto
+          //     padding: 0 20px
         .donate__frequency
           margin-left: 14px
           justify-content: flex-start

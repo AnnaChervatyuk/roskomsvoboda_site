@@ -20,8 +20,14 @@
         display: flex
         flex-direction: column
         a
-          text-decoration: underline
-          text-decoration-color: $font-color-hover
+          // text-decoration: underline
+          // text-decoration-color: $font-color-hover
+          line-height: 26px
+          color: $font-color-hover
+          &:hover
+            text-decoration: none
+            border-bottom: 1px solid$font-color-hover
+
         .paragraph__text
           @include text-main-article()
           margin-bottom: 30px
