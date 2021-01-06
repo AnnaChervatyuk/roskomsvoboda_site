@@ -35,7 +35,7 @@
         border: 1px solid $border-card-color
         border-radius: 20px
         h4.card-content__number
-          color: #4661BC
+          color: $font-color-hover
           margin-bottom: 12px
         h2.card-content__title
           margin-bottom: 20px
@@ -44,6 +44,15 @@
   .articles-cards
     border-bottom: $border
     padding-bottom: 10px
+
+.container-fluid.dark_theme
+  .cards__wrapper
+    .card-article
+      .card-content
+        background-color: $bg-card-color--dark
+        border: 1px solid $border-color--dark
+  .articles-cards
+    border-bottom: $border--dark
 
 @media (min-width: 768px)
   .container-fluid
@@ -89,3 +98,9 @@
             padding-bottom: 15px
             &:last-child
               padding-bottom: 0
+
+  .container-fluid.dark_theme
+    .cards__wrapper
+      .card-article__navigation
+        background-color: $bg-card-color--dark
+        border: 1px solid $border-color--dark

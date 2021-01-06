@@ -31,6 +31,7 @@
           height: 40px
           width: 100%
           margin-bottom: 10px
+          background-color: $bg-color
       .btn-subscribe
         @include btn ()
         width: 100%
@@ -38,6 +39,23 @@
   .contacts-search
     border-top: $border
 
+.container-fluid.dark_theme
+  .contacts
+    border-bottom: $border--dark
+    .contacts__email
+      background: $bg-color--dark
+      .form-group
+        .form-control
+          @include btn--dark ()
+          padding: 8px 16px
+          height: 40px
+          margin-bottom: 10px
+          background-color: $bg-color--dark
+      .btn-subscribe
+        @include btn--dark ()
+        height: 40px
+  .contacts-search
+    border-top: $border--dark
 
 @media (min-width: 768px)
   .container-fluid

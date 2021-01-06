@@ -62,7 +62,8 @@
 
     .dropdown-toggle::after
       display: none
-
+    .dropdown-menu
+      background-color: $bg-main-color
     .dropdown-menu.mobail-menu.show
       min-width: 100vw
       margin-left: -5px
@@ -233,7 +234,68 @@
       .icons--rss
         @include icons--rss ()
 
+.container-fluid.dark_theme
+  .navigator
+    .btn.btn-donate
+      @include btn--dark ()
+    .btn.btn-help
+      @include btn--dark ()
+      border: none
+      // &:hover
+      //   border: none
+      // &:active
+      //   border: none
 
+    .block__nav-category
+      border: none
+      border-bottom: $border--dark
+      .dropdown-item
+        &:hover
+          color: $font-color-hover
+          background-color: transparent
+        &:active
+          color: $font-color
+          background-color: transparent
+        &:focus
+          color: $font-color
+          background-color: transparent
+        .panel-heading a
+          color: $font-color
+          text-decoration: none
+      .btn-nav
+        .icons
+          @include icons--dark ()
+    .dropdown-menu
+      background-color: $bg-main-color--dark
+    .dropdown-menu.mobail-menu.show
+      border: none
+      border-bottom: $border--dark
+      .item-help
+        border-top: $border--dark
+        border-bottom: $border--dark
+      .dropdown-item.panel-group.dropdown-accordion
+        .panel.panel-default
+          a
+            color: $font-color--dark
+            &:hover
+              color: $font-color-hover
+    .more-social
+      .dropdown-menu.show
+        border: $border--dark
+        .block__nav
+          .navbar
+            .nav-item:hover
+                a
+                  .icons--rss
+                    @include icons--rss--dark ()
+    .item-social
+      .icons
+        fill: $font-color--dark
+        stroke: none
+        &:focus
+          box-shadow: none
+      .icons--rss
+        @include icons--rss--dark ()
 
 @media (min-width: 768px)
   .container-fluid
@@ -407,6 +469,16 @@
         position: relative
 
 
+.container-fluid.dark_theme
+  .navigator
+    .block__nav-social
+      border-bottom: $border--dark
+    .block__nav-category
+      .filter-wrapper
+        .dropdown-menu
+          border: $border--dark
+        a:hover
+          color: $font-color-hover
 
 @media (min-width: 1200px)
   .container-fluid

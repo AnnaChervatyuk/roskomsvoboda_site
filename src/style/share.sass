@@ -16,6 +16,19 @@
          font-weight: 700
       button.btn-icons
         max-width: 42px
+        .icons
+          // @include icons()
+          fill: $font-color
+          stroke: none
+          border-color: $font-color
+        .icons--vk:hover
+            fill: $color-vk
+        .icons--tel:hover
+            fill: $color-tel
+        .icons--fb:hover
+            fill: $color-fb
+        .icons--twitter:hover
+            fill: $color-twitter
       button
         padding: 0
         margin: 7px
@@ -30,6 +43,31 @@
       .icons
         border: $border
         padding: 5px
+
+.container-fluid.dark_theme
+  .share
+    border-bottom: $border--dark
+    .btn-group
+      .btn-donate_pay
+         @include btn--dark()
+         padding: 10px 20px
+         height: 42px
+         border-radius: 0
+      button.btn-icons
+        .icons
+          fill: $font-color--dark
+          stroke: none
+          border-color: $font-color--dark
+        .icons--vk:hover
+            fill: $color-vk
+        .icons--tel:hover
+            fill: $color-tel
+        .icons--fb:hover
+            fill: $color-fb
+        .icons--twitter:hover
+            fill: $color-twitter
+      .icons
+        border: $border--dark
 
 @media (min-width: 768px)
   .container-fluid

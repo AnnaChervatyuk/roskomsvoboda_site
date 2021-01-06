@@ -23,6 +23,8 @@ $('.dropdown-accordion').on('click', 'a[data-toggle="collapse"]', function (even
 $(document).ready(function() {
   var menu = $("#nav-bar-filter");
   var parent = $(".filter-wrapper");
+  var btnSwitchTheme = $("#switch_theme")
+  var isLightTheme = (window['localStorage'].getItem("isLightTheme") == "false") ? isLightTheme = false : isLightTheme = true
   var compileDescMenu = false;
 
   //кнопка меню на мобиле
@@ -34,6 +36,32 @@ $(document).ready(function() {
       $("#mobile-menu").attr("class", "icons icons--close");
       $("#mobile-menu use").attr("xlink:href", "./images/sprite.svg#icon-close");
     }
+  }
+
+  //переключение темы
+  function switchTheme() {
+
+    isLightTheme = !isLightTheme
+    window['localStorage'].setItem("isLightTheme", isLightTheme);
+    applyTheme();
+  }
+
+  function applyTheme(){
+    if (isLightTheme) {
+      $("body").css('color', '#1D1D1B');
+      $("body").css('background-color', '#ffffff');
+      ($(".container-fluid").hasClass("dark_theme")) ? $(".container-fluid").removeClass("dark_theme") : '';
+      $(".nav-link__logo-copyright>img").attr("src", "./images/logo_creative.png");
+      $(".nav-link__logo>img").attr("src", "./images/logo.svg");
+
+    } else {
+      $("body").css('color', '#E4E4E4');
+      $("body").css('background-color', '#1A1C1E');
+      ($(".container-fluid").hasClass("dark_theme")) ? "" : $(".container-fluid").addClass("dark_theme");
+      $(".nav-link__logo-copyright>img").attr("src", "./images/logo_creative_white.png");
+      $(".nav-link__logo>img").attr("src", "./images/logo_dark.svg");
+    }
+
   }
 
 //скрывающиеся элементы меню
@@ -122,6 +150,7 @@ function checkWidthMenu(){
   checkWidthMenu() // меню плнашет и десктоп
   checkWidth(); // проверит при загрузке страницы
   checkPosition() // высота меню - двигать или нет попап
+  applyTheme() // пррименить цвет
 
   $(window).on("resize", function (e) {
     checkWidth(); // проверит при изменении размера окна клиента
@@ -133,5 +162,8 @@ function checkWidthMenu(){
   })
   $(".container-fluid").on("click", function () {
     chooseBtnIcon()
+  });
+  btnSwitchTheme.on("click", function () {
+    switchTheme()
   });
 });

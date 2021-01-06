@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <title>Роскомсвобода</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
       <link rel="stylesheet" href="app.css">
@@ -76,7 +77,8 @@
             <div class="block__nav block__nav-category">
                 <div class="twelve columns filter-wrapper">
                   <ul class="nav-bar-logo" id="nav-bar-logo">
-                      <li class="nav-item nav-item__logo"><a class="nav-link nav-link__logo" href="/"><img src="./images/logo.svg" width="151" height="17" alt="Роскомсвобода"></a></li>
+                    <!-- <li class="nav-item nav-item__logo"><a class="nav-link nav-link__logo" href="/"><img src="./images/logo.svg" width="151" height="17" alt="Роскомсвобода"></a></li> -->
+                    <li class="nav-item nav-item__logo"><a class="nav-link nav-link__logo" href="/"><img src="./images/logo_dark.svg" width="151" height="17" alt="Роскомсвобода"></a></li>
                   </ul>
                   <ul class="nav-bar-filter nav-bar-filter-menu" id="nav-bar-filter">
                       <li class="nav-item d-none d-md-block dropdown"><a href="#" id="dropdownMenuButton-news" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Новости и статьи</a>
@@ -101,7 +103,7 @@
 
             <div class="btn-group__nav" id="btn-group__nav">
                <div class="btn-group " role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-nav">
+                  <button type="button" class="btn btn-nav" id="switch_theme">
                      <svg class="icons icons--moon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#icon-moon"></use></svg>
                   </button>
                   <a class="btn btn-nav" href="/search.html">
@@ -444,14 +446,14 @@
 
                   <div class="donate__gift text-center">
 
-                     <!-- <img src="./images/gift1.png" class="gift-image" alt="стикеры в подарок">
-                     <p class="gift-text text-center">Набор стикеров в&nbsp;подарок</p> -->
+                      <!-- <img src="./images/gift1.png" class="gift-image" alt="стикеры в подарок"> -->
+                     <!--<p class="gift-text text-center">Набор стикеров в&nbsp;подарок</p> -->
 
-                     <!-- <img src="./images/tshort1.png" class="gift-image" alt="футболка и стикеры в подарок">
-                     <p class="gift-text text-center">Футболка и набор стикеров в&nbsp;подарок</p> -->
+                      <img src="./images/tshort1.png" class="gift-image" alt="футболка и стикеры в подарок">
+                     <!--<p class="gift-text text-center">Футболка и набор стикеров в&nbsp;подарок</p> -->
 
-                     <img src="./images/tshort1box.png" class="gift-image" alt="Лутбокс, футболка и стикеры в подарок">
-                     <p class="gift-text text-center">Лутбокс, футболка и&nbsp;стикеры в&nbsp;подарок</p>
+                     <!-- <img src="./images/tshort1box.png" class="gift-image" alt="Лутбокс, футболка и стикеры в подарок"> -->
+                     <!-- <p class="gift-text text-center">Лутбокс, футболка и&nbsp;стикеры в&nbsp;подарок</p> -->
                   </div>
                   <div class="donate__btn">
                      <button type="button" class="btn btn-donate_pay">поддержать&nbsp;&rarr;</button>
@@ -492,7 +494,8 @@
          </div>
          <div class="footer" >
             <div class="btn-partners d-flex justify-content-between flex-row">
-               <a class="nav-link__logo-copyright" href="/"><img src="./images/logo_creative.png" alt="Время менять копирайт"></a>
+                <!-- <a class="nav-link__logo-copyright" href="/"><img src="./images/logo_creative.png" alt="Время менять копирайт"></a> -->
+                <a class="nav-link__logo-copyright" href="/"><img src="./images/logo_creative_white.png" alt="Время менять копирайт"></a>
                <a class="nav-link__logo-unisender" href="/"><img src="./images/logo_uniSender.png" alt="UniSender"></a>
             </div>
             <div class="btn-group btn-footer d-flex justify-content-between" role="group" aria-label="Basic example" id="btn-footer">

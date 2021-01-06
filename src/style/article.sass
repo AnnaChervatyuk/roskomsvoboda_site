@@ -129,7 +129,37 @@
               &:last-child
                 margin-right: 0
                 counter-increment: carousel-cell
+  .articles.articles-cards
+    .article_type-2
+      border-bottom: none
+  .articles.articles-news
+    .article_type-3.article .row
+      border-bottom: none
 
+.container-fluid.dark_theme
+  .articles-news
+    border-top: $border--dark
+    border-bottom: $border--dark
+  .articles
+    .btn-more-news
+      @include btn--dark()
+      margin: 0px 15px 20px
+      padding: 20px 0
+      width: calc(100% - 30px)
+      height: 70px
+    .article
+      border-bottom: $border--dark
+      a:hover
+        text-decoration: none
+        color: $font-color-hover
+    .article_type-3.article
+      border-bottom: none
+  .articles.articles-cards
+    .article_type-2
+      border-bottom: none
+  .articles.articles-news
+    .article_type-3.article .row
+      border-bottom: none
 @media (min-width: 768px)
   .container-fluid
     .articles
@@ -174,7 +204,7 @@
       .article_type-3,.article_type-2
         .row
           padding: 60px 0
-          border-bottom: 1px solid $font-color
+          border-bottom: 1px solid $border-color
       .article_type-3
         .row:last-child
           border: none
@@ -227,6 +257,15 @@
               .col-img
                 img
                   height: calc(100vw * 0.26)
+
+  .container-fluid.dark_theme
+    .articles
+      .article_type-3,.article_type-2
+        .row
+          border-bottom: 1px solid $border-color--dark
+      .article_type-3
+        .row:last-child
+          border: none
 
 
 @media (min-width: 1200px)
@@ -295,7 +334,7 @@
         .row
           margin: 0
           width: 825px
-          border-bottom: 1px solid $font-color
+          border-bottom: 1px solid $border-color
         .card-columns
           padding: 0
         .article-block:last-of-type
@@ -313,3 +352,12 @@
         margin-left: 0
         margin-right: 35px
         max-width: 825px
+
+  .container-fluid.dark_theme
+    .articles
+      .article_type-3.article
+        .row
+          border-bottom: 1px solid $border-color--dark
+        .article-block:last-of-type
+          .row:last-child
+            border: none

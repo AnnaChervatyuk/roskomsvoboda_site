@@ -15,8 +15,9 @@
          @include btn ()
          padding: 8px 16px
          height: 40px
+         background-color: transparent
          &:active, &:focus
-          border-color: #B61414
+          border-color: $color-error
       .form__input.help
         height: 340px
         margin-bottom: 10px
@@ -40,6 +41,28 @@
       fill: $font-color
       margin-right: 20px
       margin-top: -5px
+
+.container-fluid.dark_theme
+  .form
+    background-color: $bg-color--dark
+    .form__el
+      .form__input
+         @include btn--dark ()
+         padding: 8px 16px
+         height: 40px
+         &:active, &:focus
+          border-color: $color-error
+      .form__input.help
+        height: 340px
+      .form__input.error
+        border-color: $color-error
+    .btn-send
+      @include btn--dark ()
+      height: 40px
+      padding: 8px 16px
+  .form-sended
+    .icons-send
+      fill: $font-color--dark
 
 @media (min-width: 768px)
   .container-fluid

@@ -8,6 +8,7 @@ body
     margin: 0
     padding: 0
     width: calc(100vw - 17px)
+    background-color: $bg-main-color
 a
   color: $font-color
   &:hover
@@ -27,7 +28,6 @@ img
   padding: 0
   margin: 0 auto
   min-width: 360px
-  // width: calc(100% + 17px)
   width: 100%
 
 .icons
@@ -38,6 +38,8 @@ img
 .icons:focus
   fill: #4661BC
 
+.btn
+  color: $font-color
 .btn:focus
   box-shadow: none
 
@@ -74,6 +76,12 @@ h6
   font-weight: 700
   font-size: 15px
   line-height: 24px
+
+.container-fluid.dark_theme
+  a,
+  button,
+  .btn
+    color: $font-color--dark
 
 @media (min-width: 768px)
   h1

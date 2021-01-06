@@ -9,15 +9,29 @@
         padding: 8px 16px
         height: 40px
         flex-grow: 1
+        background-color: transparent
         &:active, &:focus
-          border-color: #B61414
+          border-color: $color-error
       .btn-search
         .icons
-          @include icons ()
+          @include icons--dark ()
       .btn-search-tablet
         display: none
     .btn-more-news
       margin-bottom: 30px
+
+.container-fluid.dark_theme
+  .articles.search
+    .search__block
+      .search__input
+        @include btn--dark ()
+        padding: 8px 16px
+        height: 40px
+        &:active, &:focus
+          border-color: $color-error
+      .btn-search
+        .icons
+          @include icons--dark ()
 
 @media (min-width: 768px)
   .container-fluid
@@ -41,6 +55,16 @@
           max-width: 60%
           .card-body
             margin-right: 0
+
+  .container-fluid.dark_theme
+    .articles.search
+      .search__block
+        .btn-search-tablet
+          @include btn--dark ()
+          padding: 0 30px
+          height: 40px
+          font-size: 18px
+          font-weight: 500
 
 @media (min-width: 1200px)
   .container-fluid

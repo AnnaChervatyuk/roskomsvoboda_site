@@ -40,7 +40,7 @@
         .paragraph__quote
           background-color: $bg-card-color
           padding: 15px
-          border: 1px solid $border-card-color
+          // border: 1px solid $border-card-color
           border-radius: 20px
           margin-bottom: 30px
           .paragraph__icon
@@ -73,8 +73,20 @@
         font-weight: bold
         display: flex
         align-items: center
+        .icons--author
+          fill: $font-color
         .name
           padding-left: 8px
+
+.container-fluid.dark_theme
+  .news__wrapper
+    .news__content
+      .paragraph
+        .paragraph__quote
+          background-color: $bg-card-color--dark
+      .news_author
+        .icons--author
+          fill: $font-color--dark
 
 @media (min-width: 768px)
   .container-fluid

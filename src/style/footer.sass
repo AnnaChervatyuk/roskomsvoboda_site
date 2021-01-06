@@ -41,11 +41,51 @@
     .nav-link__logo-copyright
       img
         width: 155px
-        height: 23px
+        height: auto
     .nav-link__logo-unisender
       img
         width: 104px
         height: 30px
+
+.container-fluid.dark_theme
+  // .footer
+  //   padding: 25px 15px
+  .btn-footer
+    // padding: 15px 0
+    // .btn
+    //   padding: 3px
+    //   min-width: 30px
+    //   &:focus
+    //     box-shadow: none
+    .icons
+      fill: $font-color--dark
+      stroke: none
+    .icons--rss
+      @include icons--rss--dark ()
+      &:hover
+        stroke: $color-rss
+    .icons--vk:hover
+        fill: $color-vk
+
+    .icons--tel:hover
+        fill: $color-tel
+
+    .icons--fb:hover
+        fill: $color-fb
+
+    .icons--twitter:hover
+        fill: $color-twitter
+
+    .icons--youtube:hover
+        fill: $color-youtube
+
+    .icons--instagram:hover
+        fill: $color-instagram
+
+    .icons--zen:hover
+        fill: $color-zen
+  .btn-partners
+    border-bottom: 1px solid $border-color--dark
 
 @media (min-width: 768px)
   .container-fluid
