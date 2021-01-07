@@ -56,15 +56,16 @@
           .card-body
             margin: 0
             padding: 15px
-            background-image: $card-body-gradient-mob
+            background-image: linear-gradient(360deg, rgba($bg-main-color, 0.971353) 0%, rgba($bg-main-color, 0.768225) 33.33%, rgba($bg-main-color, 0) 100%)
 
-.container-fluid
+.container-fluid.dark_theme
   .articles
     .article.article_type-4
       .card-columns
         .row:nth-child(3n+1)
           .card-body
-            background-image: $card-body-gradient-mob--dark
+            background-image: linear-gradient(360deg, rgba($bg-main-color--dark, 0.971353) 0%, rgba($bg-main-color--dark, 0.768225) 33.33%, rgba($bg-main-color--dark, 0) 100%)
+
 
 @media (min-width: 768px)
   .container-fluid
@@ -89,18 +90,18 @@
                 height: calc(100vw * 0.334)
               .card-body
                 padding: 34px 50px
-                background-image: $card-body-gradient-tablet
+                background-image: linear-gradient(360deg, rgba($bg-main-color, 0.971353) 0%, rgba($bg-main-color, 0.96449) 13.33%, rgba($bg-main-color, 0.91834) 20%, rgba($bg-main-color, 0.852589) 26.67%, rgba($bg-main-color, 0.768225) 33.33%, rgba($bg-main-color, 0.668116) 40%, rgba($bg-main-color, 0.557309) 46.67%, rgba($bg-main-color, 0.442691) 53.33%, rgba($bg-main-color, 0.331884) 60%, rgba($bg-main-color, 0.231775) 66.67%, rgba($bg-main-color, 0.147411) 73.33%, rgba($bg-main-color,0.0816599) 80%, rgba($bg-main-color, 0.03551) 86.67%, rgba($bg-main-color, 0.0086472) 93.33%, rgba($bg-main-color, 0) 100%)
 
                 .card-text
                   width: 60%
 
-  .container-fluid
+  .container-fluid.dark_theme
     .articles
       .article.article_type-4
         .card-columns
           .row:nth-child(3n+1)
             .card-body
-              background-image: $card-body-gradient-tablet--dark
+              background-image: linear-gradient(360deg, rgba($bg-main-color--dark, 0.971353) 0%, rgba($bg-main-color--dark, 0.96449) 13.33%, rgba($bg-main-color--dark, 0.91834) 20%, rgba($bg-main-color--dark, 0.852589) 26.67%, rgba($bg-main-color--dark, 0.768225) 33.33%, rgba($bg-main-color--dark, 0.668116) 40%, rgba($bg-main-color--dark, 0.557309) 46.67%, rgba($bg-main-color--dark, 0.442691) 53.33%, rgba($bg-main-color--dark, 0.331884) 60%, rgba($bg-main-color--dark, 0.231775) 66.67%, rgba($bg-main-color--dark, 0.147411) 73.33%, rgba($bg-main-color--dark, 0.0816599) 80%, rgba($bg-main-color--dark, 0.03551) 86.67%, rgba($bg-main-color--dark, 0.0086472) 93.33%, rgba($bg-main-color--dark, 0) 100%)
 
 @media (min-width: 1200px)
   .container-fluid

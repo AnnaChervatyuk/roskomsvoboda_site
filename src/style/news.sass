@@ -20,8 +20,6 @@
         display: flex
         flex-direction: column
         a
-          // text-decoration: underline
-          // text-decoration-color: $font-color-hover
           line-height: 26px
           color: $font-color-hover
           &:hover
@@ -40,7 +38,6 @@
         .paragraph__quote
           background-color: $bg-card-color
           padding: 15px
-          // border: 1px solid $border-card-color
           border-radius: 20px
           margin-bottom: 30px
           .paragraph__icon
@@ -67,6 +64,13 @@
           content: "— "
       .articles-news
         margin-bottom: 30px
+        .article_type-3.article
+          .card-columns
+            .col-img
+              width: 100%
+              img
+                height: calc(100vw / 2.05)
+                min-height: 175px
       .news_author
         padding: 0
         margin: 0 45px 30px
@@ -115,14 +119,34 @@
         .news__list
           padding: 0
           margin: 0 45px 30px
+
+        .articles-news
+          .article_type-3.article
+            padding-top: 0
+            .card-columns
+              .col-img
+                width: auto
+                margin-right: 30px
+                img
+                  height: calc(100vw * 0.159)
+                  max-width: 350px
+                  max-height: 175px
+                  min-width: 320px
+
+
         .articles-news .article_type-3 .row
-          padding: 0
+            padding: 0
+            display: flex
+            flex-wrap: nowrap
+            margin-bottom: 20px
 
 @media (min-width: 1200px)
   .container-fluid
     .news__wrapper
       width: 100%
       margin-top: 0
+      .articles-news .article_type-3 .row
+          margin-top: 30px
       .news__info
         width: 900px
         margin-right: auto

@@ -18,7 +18,8 @@
       flex-wrap: nowrap
       align-items: center
       margin: 0
-      padding: 15px 15px
+      height: 55px
+      padding: 19px 15px 17px
       border: none
       border-bottom: $border
       .filter-wrapper
@@ -75,27 +76,27 @@
       // opacity: 0.96
       .item-help
         display: flex
-        justify-content: space-around
+        justify-content: space-between
         border-top: $border
         border-bottom: $border
         margin-top: 35px
-        padding: 20px 0
+        padding: 18px 0
       .dropdown-item.panel-group.dropdown-accordion
         margin: 0
         padding: 0
         .panel.panel-default
-          margin: 15px 0
+          margin: 22px 0 32px
           font-size: 18px
           .navbar
             padding: 0
             margin-left: 20px
-            margin-top: 10px
+            margin-top: 0
             flex-direction: column
             align-items: flex-start
             font-size: 15px
             display: flex
             .nav-item
-              margin: 10px 0
+              margin: 22px 0 0
               white-space: pre-wrap
               line-height: 0
           a
@@ -308,12 +309,15 @@
 
       .block__nav-social
         display: flex
-        padding: 7px 45px
+        padding: 1px 45px
         justify-content: space-between
         align-items: center
         border-bottom: $border
         .btn-group-donate
           align-items: baseline
+          .btn
+            font-size: 11px
+            line-height: 18px
           .btn-donate
             margin-left: 20px
         .social-desc
@@ -350,6 +354,8 @@
       .block__nav-category
         padding: 0 45px
         align-items: baseline
+        height: auto
+        // padding: 19px 15px 17px
         .filter-wrapper
           display: flex
           flex-wrap: nowrap
@@ -473,6 +479,10 @@
   .navigator
     .block__nav-social
       border-bottom: $border--dark
+      .btn-group-donate
+        .btn
+          font-size: 11px
+          line-height: 18px
     .block__nav-category
       .filter-wrapper
         .dropdown-menu
@@ -486,7 +496,7 @@
       padding: 0 45px
       .block__nav
         .block__nav-social
-          padding: 7px 0
+          padding: 1px 0
       .block__nav-category
         padding: 0
         .dropdown-menu.list-work_desc.show
