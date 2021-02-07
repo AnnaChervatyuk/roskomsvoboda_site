@@ -217,7 +217,7 @@
           padding: 60px 0
           border-bottom: 1px solid $border-color
       .article_type-3
-        .row:last-child
+        .row:nth-last-child(-n+2)
           border: none
 
       .article_type-3.article
@@ -298,7 +298,7 @@
         .row
           border-bottom: 1px solid $border-color--dark
       .article_type-3
-        .row:last-child
+        .row:nth-last-child(-n+2)
           border: none
 
 
@@ -378,7 +378,7 @@
         .card-columns
           padding: 0
         .article-block:last-of-type
-          .row:last-child
+          .row:nth-last-child(-n+2)
             border: none
 
       .article_type-2.article
@@ -401,5 +401,5 @@
         .row
           border-bottom: 1px solid $border-color--dark
         .article-block:last-of-type
-          .row:last-child
+          .row:nth-last-child(-n+2)
             border: none

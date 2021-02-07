@@ -1,0 +1,16 @@
+@charset "UTF-8";
+.container-body {
+  background-color: #1A1C1E;
+  color: #E4E4E4;
+}
+.container-fluid .navigator .block__nav-category .filter-wrapper a,
+.container-fluid.dark_theme .navigator .btn.btn-donate,
+.container-fluid.dark_theme .navigator .btn.btn-help,
+button {
+  color: #E4E4E4;
+}
+
+.container-fluid .navigator .block__nav-category .filter-wrapper .nav-bar-logo .nav-item .nav-link__logo {
+  background: url(images/logo_dark.svg) no-repeat;
+  background-position-y: 5px;
+}

@@ -1,3 +1,4 @@
+
 .container-fluid
   .navigator
     .btn.btn-donate
@@ -63,9 +64,10 @@
 
     .dropdown-toggle::after
       display: none
-    .dropdown-menu
+    .dropdown-menu.mobail-menu
       background-color: $bg-main-color
     .dropdown-menu.mobail-menu.show
+      animation: OPEN 0.2s ease-out
       min-width: 100vw
       margin-left: -5px
       width: 100%
@@ -73,7 +75,6 @@
       border: none
       border-bottom: $border
       border-radius: 0
-      // opacity: 0.96
       .item-help
         display: flex
         justify-content: space-between
@@ -159,6 +160,7 @@
         margin: 0
         padding: 20px 30px
         border: $border
+        animation: OPEN 0.2s ease-out
         .block__nav
           .navbar
             padding: 0
@@ -400,6 +402,7 @@
                 margin-right: 25px
               .block__nav.dropdown-menu.show
                 margin-top: 20px
+                animation: OPEN 0.2s ease-out
               .block__nav.dropdown-menu.show.megamenu
                 margin-top: 58px
 

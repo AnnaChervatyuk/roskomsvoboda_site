@@ -492,7 +492,7 @@ h6 {
   font-weight: 500;
   font-size: 13px;
   color: #E4E4E4;
-  border-color: #E4E4E4;
+  border-color: #E4E4E4; 
   border: none;
 }
 .container-fluid.dark_theme .navigator .btn.btn-help:hover {

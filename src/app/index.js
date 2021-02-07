@@ -2,12 +2,15 @@ import '../style/app.scss';
 
 // Collapse accoridion every time dropdown is shown
 $('.dropdown-accordion').on('show.bs.dropdown', function (event) {
+  console.log("2_dropdown-accordion")
+
   var accordion = $(this).find($(this).data('accordion'));
   accordion.find('.panel-collapse.in').collapse('hide');
 });
 
 // Prevent dropdown to be closed when we click on an accordion link
 $('.dropdown-accordion').on('click', 'a[data-toggle="collapse"]', function (event) {
+  console.log("1_dropdown-accordion")
   event.preventDefault();
   event.stopPropagation();
   $($(this).data('parent')).find('.panel-collapse.in').collapse('hide');
@@ -59,6 +62,7 @@ $(document).ready(function() {
       $("body").css('background-color', '#1A1C1E');
       ($(".container-fluid").hasClass("dark_theme")) ? "" : $(".container-fluid").addClass("dark_theme");
       $(".nav-link__logo-copyright>img").attr("src", "./images/logo_creative_white.png");
+      $(".nav-link__logo").css('background', 'none');
       $(".nav-link__logo>img").attr("src", "./images/logo_dark.svg");
     }
 
@@ -161,7 +165,8 @@ function checkWidthMenu(){
     chooseBtnIcon()
   })
   $(".container-fluid").on("click", function () {
-    chooseBtnIcon()
+    $("#mobile-menu").attr("class", "icons icons--menu");
+    $("#mobile-menu use").attr("xlink:href", "./images/sprite.svg#icon-menu");
   });
   btnSwitchTheme.on("click", function () {
     switchTheme()
