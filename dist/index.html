@@ -1,52 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
    <head>
-     <script type="text/javascript">
-     var isLightTheme = (window['localStorage'].getItem("isLightTheme") == "false") ? isLightTheme = false : isLightTheme = true
-       var head = document.head
-               , link = document.createElement('link');
-
-       link.type = 'text/css';
-       link.rel = 'stylesheet';
-       if (isLightTheme) {
-       link.href = 'app_red.css';
-       } else {
-         link.href = 'app_black.css';
-       }
-       head.appendChild(link);
-   </script>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <title>Роскомсвобода</title>
-
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-      <!-- <script>
-        var isLightTheme = (window['localStorage'].getItem("isLightTheme") == "false") ? isLightTheme = false : isLightTheme = true
-        console.log("isLightTheme", isLightTheme)
-
-        if (isLightTheme) {
-          // <link rel="stylesheet" href="app_red.css">
-          $("body").css('color', '#1D1D1B');
-          $("body").css('background-color', '#ffffff');
-        } else {
-          // <link rel="stylesheet" href="app_red.css">
-          $("body").css('color', '#E4E4E4');
-          $("body").css('background-color', '#1A1C1E');
-        }
-      // document.addEventListener("DOMContentLoaded", () => {
-      //   $("body").css('background-color', 'red');
-      //   // $('.container-fluid').css('color','red')
-      // });
-
-      </script> -->
-
       <link rel="stylesheet" href="app.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-   </head>
-   <body class="container-body" id="body">
+      <script type="text/javascript">
+        var isLightTheme = (window['localStorage'].getItem("isLightTheme") == "false") ? isLightTheme = false : isLightTheme = true
+          var head = document.head
+                  , link = document.createElement('link');
+
+          link.type = 'text/css';
+          link.rel = 'stylesheet';
+          if (isLightTheme) {
+          link.href = 'app_red.css';
+          } else {
+            link.href = 'app_black.css';
+          }
+          head.appendChild(link);
+      </script>
+    </head>
+   <body class="container">
       <div class="container-fluid">
          <div class="navigator">
            <div class="block__nav d-none d-md-block d-lg-block">
@@ -390,7 +368,7 @@
                     </div>
                  </div>
                </div>
-            <!-- <div class="article-block">
+            <div class="article-block">
                <div class="promo-banner" id="promo-banner_2">
                   <div class="promo-banner_background"></div>
                   <a class="" href="#"><img src="./images/2020-10-25_21-38-02.png" class="img-sticky" alt="..."></a>
@@ -438,8 +416,11 @@
                         </div>
                      </div>
                   </div>
+                  <div style="width:100px; height:100px; margin:10px">
+                     123123123123123
+                  </div>
                </div>
-            </div> -->
+            </div>
          </div>
          <button type="button" class="btn btn-more-news">Показать еще</button>
        </div>
