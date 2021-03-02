@@ -76,6 +76,10 @@ module.exports = {
         filename: 'project.html',
         template: 'src/public/project.html'
         }),
+        new HtmlWebpackPlugin({
+          filename: 'tech.html',
+          template: 'src/public/tech.html'
+          }),
       new HtmlWebpackPlugin({
         filename: 'cards.html',
         template: 'src/public/cards.html'

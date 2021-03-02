@@ -1,0 +1,81 @@
+.container-fluid
+  .articles
+    .article.article_type-5
+      width: 100%
+      border: none
+      padding: 0
+      display: flex
+      flex-direction: column
+      a
+        font-weight: 700
+        font-size: 20px
+      a:hover
+        text-decoration: none
+      a:active
+        color: $font-color-hover
+        opacity: 0.8
+      .card-columns
+        border: none
+        padding: 0 15px
+        order: 2
+        column-count: 1
+        &:last-child
+          padding-bottom: 15px
+        .card
+          border: none
+          margin-bottom: 30px
+          background-color: transparent
+          .card-body
+            padding: 0
+            margin-right: 15px
+            .card-title
+              margin: 20px 0 10px
+              font-weight: 700
+            .card-text
+              margin-bottom: 10px
+              font-size: 13px
+              font-weight: 400
+              &:last-child
+                margin-bottom: 0
+        .row
+          margin: 20px 0 0
+          margin-top: 30px
+          min-height: 175px
+          .card-img
+            height: calc(100vw / 2.05)
+            min-height: 175px
+        .card-img-overlay
+          position: relative
+
+
+@media (min-width: 768px)
+  .container-fluid
+    .articles
+      .article.article_type-5
+        display: flex
+        flex-direction: row
+        padding: 0 15px
+        flex-wrap: wrap
+        .card-columns
+          order: 1
+          margin-bottom: 30px
+          padding: 0 15px
+          width: 50%
+          .row
+            .card-img
+              height: calc(100vw * 0.26)
+
+
+
+@media (min-width: 1200px)
+  .container-fluid
+    .articles
+      .article.article_type-5
+        padding: 0
+        .card-columns
+          padding: 0
+          .row
+            .card-img
+              height: 260px
+          &:nth-child(odd)
+            padding-right: 30px
