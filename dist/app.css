@@ -114,6 +114,85 @@ h6 {
   color: #E4E4E4;
 }
 
+.errors {
+  text-align: center;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+}
+.errors .error_img {
+  margin: 0 auto 40px;
+  max-width: 740px;
+}
+.errors .error_text {
+  margin-bottom: 10px;
+}
+.errors .btn-group-error {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 30px auto 0;
+}
+.errors .btn-group-error .btn {
+  border: 2px solid #1D1D1B;
+  padding: 0;
+  height: 27px;
+  border-radius: 0;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 13px;
+  color: #1D1D1B;
+  border-color: #1D1D1B;
+  margin: 15px 15px;
+  height: 40px;
+  line-height: 20px;
+  padding: 8px 16px;
+}
+.errors .btn-group-error .btn:hover {
+  color: #4661BC;
+  border-color: #4661BC;
+}
+.errors .btn-group-error .btn:active {
+  color: #4661BC;
+  border-color: #4661BC;
+  opacity: 0.8;
+}
+.errors .btn-group-error .btn:focus {
+  box-shadow: none;
+}
+.errors .btn-group-error .btn-main {
+  color: #FFFFFF;
+  background-color: #1D1D1B;
+}
+
+.container-fluid.dark_theme .errors .btn-group-error .btn-main {
+  color: #1D1D1B;
+  background-color: #ffffff;
+}
+.container-fluid.dark_theme .errors .btn-group-error .btn {
+  border: 2px solid #1D1D1B;
+  padding: 0;
+  height: 27px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 13px;
+  color: #E4E4E4;
+  border-color: #E4E4E4;
+}
+.container-fluid.dark_theme .errors .btn-group-error .btn:hover {
+  color: #4661BC;
+  border-color: #4661BC;
+}
+.container-fluid.dark_theme .errors .btn-group-error .btn:active {
+  color: #4661BC;
+  border-color: #4661BC;
+  opacity: 0.8;
+}
+.container-fluid.dark_theme .errors .btn-group-error .btn:focus {
+  box-shadow: none;
+}
+
 @media (min-width: 768px) {
   h1 {
     font-size: 45px;
@@ -129,11 +208,21 @@ h6 {
     font-size: 22px;
     font-weight: 27px;
   }
+
+  .errors {
+    padding: 20px 45px;
+  }
+  .errors .btn-group-error {
+    margin-bottom: 80px;
+  }
 }
 @media (min-width: 1200px) {
   .container-fluid {
     width: 1200px;
     min-width: 1200px;
+  }
+  .container-fluid .articles.errors {
+    margin-top: 40px;
   }
 
   h1 {

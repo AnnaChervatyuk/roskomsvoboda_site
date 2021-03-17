@@ -2,7 +2,6 @@ import '../style/app.scss';
 
 // Collapse accoridion every time dropdown is shown
 $('.dropdown-accordion').on('show.bs.dropdown', function (event) {
-  console.log("2_dropdown-accordion")
 
   var accordion = $(this).find($(this).data('accordion'));
   accordion.find('.panel-collapse.in').collapse('hide');
@@ -10,7 +9,6 @@ $('.dropdown-accordion').on('show.bs.dropdown', function (event) {
 
 // Prevent dropdown to be closed when we click on an accordion link
 $('.dropdown-accordion').on('click', 'a[data-toggle="collapse"]', function (event) {
-  console.log("1_dropdown-accordion")
   event.preventDefault();
   event.stopPropagation();
   $($(this).data('parent')).find('.panel-collapse.in').collapse('hide');

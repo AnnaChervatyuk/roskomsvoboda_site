@@ -85,6 +85,41 @@ h6
   .btn
     color: $font-color--dark
 
+.errors
+  text-align: center
+  padding: 20px 15px
+  display: flex
+  flex-direction: column
+  .error_img
+    margin: 0 auto 40px
+    max-width: 740px
+  .error_text
+    margin-bottom: 10px
+  .btn-group-error
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    margin: 30px auto 0
+    .btn
+      @include btn()
+      margin: 15px 15px
+      height: 40px
+      line-height: 20px
+      padding: 8px 16px
+    .btn-main
+      color: #FFFFFF
+      background-color: #1D1D1B
+
+.container-fluid.dark_theme
+  .errors
+    .btn-group-error
+      .btn-main
+        color: #1D1D1B
+        background-color: #ffffff
+      .btn
+        @include btn--dark()
+
+
 @media (min-width: 768px)
   h1
     font-size: 45px
@@ -97,11 +132,17 @@ h6
   h4
     font-size: 22px
     font-weight: 27px
+  .errors
+    padding: 20px 45px
+    .btn-group-error
+      margin-bottom: 80px
 
 @media (min-width: 1200px)
   .container-fluid
     width: 1200px
     min-width: 1200px
+    .articles.errors
+      margin-top: 40px
 
   h1
     font-size: 50px

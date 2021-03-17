@@ -80,6 +80,14 @@ module.exports = {
           filename: 'tech.html',
           template: 'src/public/tech.html'
           }),
+    new HtmlWebpackPlugin({
+      filename: '500.html',
+      template: 'src/public/500.html'
+      }),
+    new HtmlWebpackPlugin({
+      filename: '404.html',
+      template: 'src/public/404.html'
+      }),
       new HtmlWebpackPlugin({
         filename: 'cards.html',
         template: 'src/public/cards.html'
