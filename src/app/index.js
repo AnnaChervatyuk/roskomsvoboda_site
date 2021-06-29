@@ -76,11 +76,11 @@ function checkWidthMenu(){
   }
 
   function checkPosition(){
-    if ($('.has-megamenu').offset().top > 90){
-      $('#list-work_desc').css('margin-top', '100px')
-    } else {
-      $('#list-work_desc').css('margin-top', '58px')
-    }
+    // if ($('.has-megamenu').offset().top > 90){
+    //   $('#list-work_desc').css('margin-top', '100px')
+    // } else {
+    //   $('#list-work_desc').css('margin-top', '58px')
+    // }
   }
 
   function checkWidth() {

@@ -1021,6 +1021,18 @@ h6 {
   margin-bottom: 30px;
   background-color: transparent;
 }
+.container-fluid .articles .card .label_completed {
+  font-size: 12px;
+  line-height: 18px;
+  color: #4661BC;
+  background: #E7ECFC;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin: 0;
+  margin-top: 19px;
+  width: fit-content;
+  width: -moz-fit-content;
+}
 .container-fluid .articles .row {
   margin: 20px 0 0;
 }
@@ -1096,6 +1108,10 @@ h6 {
 .container-fluid.dark_theme .articles-news {
   border-top: 2px solid #3A3A3A;
   border-bottom: 2px solid #3A3A3A;
+}
+.container-fluid.dark_theme .articles .card .label_completed {
+  color: #BDD3F1;
+  background: #2B3041;
 }
 .container-fluid.dark_theme .articles .btn-more-news {
   border: 2px solid #1D1D1B;
