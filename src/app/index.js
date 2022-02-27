@@ -149,6 +149,22 @@ function checkWidthMenu(){
 
   }
 
+
+  function clickSpoiler () {
+    var cardSpoilers = $('.card-content__spoiler')
+    cardSpoilers.on("click", function (e) {
+      if (e.target.classList.contains("spoiler-open")) {
+        e.target.innerHTML = "Раскрыть&nbsp;&darr;"
+      } else {
+        e.target.innerHTML = "Свернуть&nbsp;&uarr;"
+      }
+      e.target.classList.toggle("spoiler-open")
+      e.target.classList.toggle("spoiler-close")
+      $(e.target).parent().find(".card-content__text")[0].classList.toggle("hidden")
+    })
+  }
+
+  clickSpoiler()
   checkWidthMenu() // меню плнашет и десктоп
   checkWidth(); // проверит при загрузке страницы
   checkPosition() // высота меню - двигать или нет попап

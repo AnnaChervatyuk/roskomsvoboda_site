@@ -29,18 +29,35 @@
       .card-article__image
         margin: 30px 0 30px
       .card-content
-        background-color: $bg-card-color
         margin: 20px 15px 0
-        padding: 15px
-        border: 1px solid $border-card-color
         border-radius: 20px
-        h4.card-content__number
-          color: $font-color-hover
-          margin-bottom: 12px
-        h2.card-content__title
-          margin-bottom: 20px
-        .card-content__text
-          @include text-main-article()
+        background-color: $bg-card-color
+        border: 1px solid $border-card-color
+        -webkit-transition: 0.2s ease-in-out
+        transition: 0.2s ease-in-out
+        .card-content__inner
+          padding: 15px
+          -webkit-transition: 0.2s ease-in-out
+          transition: 0.2s ease-in-out
+          h4.card-content__number
+            color: $font-color-hover
+            margin-bottom: 12px
+          h2.card-content__title
+            margin-bottom: 20px
+          .card-content__text
+            @include text-main-article()
+        .card-content__spoiler
+          width: 100%
+          text-align: center
+          margin: 0
+          padding: 17px 0
+          background-color: #F1F2F4
+          border-radius: 0 0 20px 20px
+          &:hover
+            background-color: #ebecef
+            cursor: pointer
+            -webkit-transition: 0.2s ease-in-out
+            transition: 0.2s ease-in-out
   .articles-cards
     border-bottom: $border
     padding-bottom: 10px
@@ -51,8 +68,16 @@
       .card-content
         background-color: $bg-card-color--dark
         border: 1px solid $border-color--dark
+        .card-content__spoiler
+          background-color: #333333
+          &:hover
+            background-color: #363636
   .articles-cards
     border-bottom: $border--dark
+
+
+
+
 
 @media (min-width: 768px)
   .container-fluid
@@ -66,8 +91,10 @@
         .card-article__notice
           margin: 20px 45px 0
         .card-content
-          padding: 30px
           margin: 20px 45px 0
+          .card-content__inner
+            padding: 30px
+
 
 @media (min-width: 1200px)
   .container-fluid
@@ -83,7 +110,8 @@
           margin: 0
         .card-content
           margin: 20px 0
-          padding: 60px 70px
+          .card-content__inner
+            padding: 60px 70px
       .card-article__navigation
         width: 255px
         margin-top: 20px
