@@ -8,11 +8,16 @@ body
     margin: 0
     padding: 0
     width: calc(100vw - 17px)
+    // width: 100vw
     background-color: $bg-main-color
 a
   color: $font-color
   &:hover
     color: $font-color-hover
+
+.icons.icons--download,
+.icons.icons--link
+  fill: $font-color-hover
 
 button
   color: $font-color
@@ -86,6 +91,9 @@ h6
   button,
   .btn
     color: $font-color--dark
+  .icons.icons--download,
+  .icons.icons--link
+    fill: $font-color--dark
 
 .errors
   text-align: center

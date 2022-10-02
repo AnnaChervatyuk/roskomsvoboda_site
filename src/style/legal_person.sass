@@ -1,0 +1,145 @@
+.container-fluid.legal_person
+  .wrapper
+    margin-top: 10px
+    .info
+      margin: 0 15px 10px
+      .tags-1
+        padding-top: 10px
+        h6
+          padding-right: 15px
+      .date
+        color: $font-color-gray
+        padding-top: 10px
+    .content
+      .content__header
+        display: flex
+        flex-direction: column
+        margin: 0 15px 20px
+        h1,h3,h4,h5
+          margin: 0
+          margin-bottom: 10px
+        .content__header-img
+          width: 100%
+          max-width: 470px
+          max-height: 470px
+          min-width: 230px
+          min-height: 230px
+          aspect-ratio: 1
+          order: 1
+          margin-bottom: 30px
+          border-radius: 6px
+        &-description
+          order: 2
+      h1,h3
+        margin: 0 15px 20px
+      h4, h5
+        margin: 0 15px 10px
+      .paragraph
+        padding: 0 15px
+        display: flex
+        flex-direction: column
+        &.mb-3
+          a
+            vertical-align: middle
+        a
+          line-height: 26px
+          color: $font-color-hover
+          &:hover
+            text-decoration: none
+            border-bottom: 1px solid$font-color-hover
+
+        .paragraph__text
+          @include text-main-article()
+          margin-bottom: 30px
+
+      .news__image
+        margin: 30px 0 30px
+        .text-muted
+          margin: 0 15px
+      .news__list
+        padding: 0 15px
+        margin-bottom: 30px
+        li
+          list-style-type: none
+        li:before
+          content: "— "
+
+@media (min-width: 500px)
+  .container-fluid.legal_person
+    .wrapper
+      margin-top: 10px
+      .content
+        .content__header
+          flex-direction: row
+          align-items: center
+          .content__header-description
+            text-align: center
+            flex-grow: 1
+            margin-bottom: 30px
+            h1
+              width: min-content
+              margin: 0 auto
+              text-align: center
+          .content__header-img
+            margin-bottom: 0
+            margin-left: 10px
+            order: 1
+          &-description
+            order: 0
+@media (min-width: 768px)
+  .container-fluid.legal_person
+    .wrapper
+      margin-top: 20px
+      .info
+        margin: 20px 45px
+      .content
+        .content__header
+          margin: 0
+          margin-bottom: 20px
+          padding: 0 45px
+          .content__header-img
+            margin-left: 20px
+        h1,h3
+          margin: 0 45px 20px
+        h4, h5
+          margin: 0 45px 10px
+        .paragraph
+          padding: 0 45px
+
+        .news__image
+          .text-muted
+            margin: 0 45px
+        .news__list
+          padding: 0
+          margin: 0 45px 30px
+
+
+@media (min-width: 1200px)
+  .container-fluid.legal_person
+    .wrapper
+      width: 100%
+      margin-top: 0
+
+      .info
+        margin: 20px 45px
+      .content
+        width: 100%
+        .content__header
+          .content__header-img
+            margin-left: 60px
+        h1
+          margin: 0 45px
+          width: 900px
+        .paragraph
+          width: 100%
+          flex-direction: row
+
+        .news__image
+          display: flex
+          flex-direction: row
+          padding: 0 45px
+          img
+            margin-right: 24px
+            min-width: 900px
+          .text-muted
+            margin: 0

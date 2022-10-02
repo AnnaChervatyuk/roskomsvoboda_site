@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: __dirname + '/dist', // Folder to store generated bundle
     filename: 'bundle.js',  // Name of generated bundle after build
-    publicPath: '/' // public URL of the output directory when referenced in a browser
+    publicPath: '' // public URL of the output directory when referenced in a browser
   },
 
 
@@ -97,8 +97,16 @@ module.exports = {
         template: 'src/public/news.html'
     }),
     new HtmlWebpackPlugin({
+      filename: 'legal.html',
+      template: 'src/public/legal.html'
+  }),
+    new HtmlWebpackPlugin({
       filename: 'search.html',
       template: 'src/public/search.html'
+  }),
+    new HtmlWebpackPlugin({
+      filename: 'legal_person.html',
+      template: 'src/public/legal_person.html'
   })
   ],
 

@@ -183,6 +183,29 @@
     .article_type-3.article .row
       border-bottom: none
 
+.container-fluid.container-fluid__legal
+  .articles
+    .article_type-2
+      border-bottom: 2px solid $border-color
+      .carousel
+        .carousel-cell
+          width: 350px
+          .card-img-top
+            width: 330px
+            height: 330px
+          .card
+            .card-body
+              .card-text
+                overflow: hidden
+                display: -webkit-box
+                -webkit-line-clamp: 7
+                -webkit-box-orient: vertical
+.container-fluid.dark_theme.container-fluid__legal
+  .articles
+    .article_type-2
+      border-bottom: $border--dark
+
+
 @media (min-width: 768px)
   .container-fluid
     .articles
@@ -316,6 +339,16 @@
         .row:nth-last-child(-n+2)
           border: none
 
+.container-fluid.container-fluid__legal
+  .articles
+    .article_type-2
+      .carousel
+        .carousel-cell
+          width: 350px
+          .card-img-top
+            width: 330px
+            height: 330px
+            padding-right: 0
 
 @media (min-width: 1200px)
   .container-fluid
