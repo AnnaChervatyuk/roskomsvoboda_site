@@ -1,0 +1,186 @@
+
+.container-fluid
+  .legal-help
+    font-size: 18px
+    line-height: 29px
+    padding: 20px 15px 0
+
+
+.container-fluid
+  .legal-help
+    .legal-request__wrapper
+      margin: 40px 0
+      .legal-description__spoiler
+        background-color: #F9F6E5
+        text-align: center
+        font-size: 16px
+        border-radius: 0 0 20px 20px
+        margin: 1px 0 40px
+        line-height: 160%
+        padding: 20px 40px
+        display: none
+        &:hover
+          cursor: pointer
+        &.spoiler-open
+          display: block
+        .icons--arrow
+          transform: rotate(180deg)
+      .legal-description
+        background-color: #F9F6E5
+        font-size: 16px
+        border-radius: 20px
+        line-height: 160%
+        padding: 20px 40px
+        .legal-description-content
+          display: none
+        &.spoiler-open
+          border-radius: 20px 20px 0 0
+          .legal-description-request
+            .icons--arrow
+              display: none
+          .legal-description-content
+            display: block
+        .legal-description-content
+          h4
+            margin: 40px 0 20px
+        .legal-description-request
+          display: flex
+        p
+          margin-bottom: 0
+        .legal-description-request__icon
+          padding-left: 40px
+          margin: auto 0
+    .legal-form-description
+      padding: 20px
+      text-align: center
+      background-color: #F2F2F3
+      border-radius: 20px
+
+      .form-request__about
+        max-width: 580px
+        text-align: center
+        font-size: 15px
+        line-height: 160%
+        margin: 0 auto 30px
+      .btn-request
+        background-color: $font-color
+        color: #fff
+        min-width: 240px
+        font-size: 15px
+        line-height: 160%
+        &:hover
+          color:  $font-color-hover
+  .legal-form-request
+    .form__block
+      background-color: #F2F2F3
+      border-radius: 20px
+      padding: 40px
+      margin-bottom: 10px
+      .recaptcha
+        margin-top: 30px
+      .message
+        span
+          font-size: 13px
+          line-height: 150%
+      textarea
+        width: 100%
+        font-size: 15px
+        line-height: 160%
+        border: $border
+        margin-bottom: 30px
+        &:-moz-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder,
+        &::-webkit-input-placeholder,
+        &::placeholder
+          color: #D1D1CD
+      h3
+        margin-bottom: 5px
+      .request-desclaimer
+        color: $font-small-color
+        font-size: 15px
+        line-height: 160%
+        margin-bottom: 30px
+      .list_problems
+        .item_problems
+          display: block
+          font-size: 15px
+          line-height: 160%
+          margin-bottom: 20px
+          position: relative
+          padding-left: 30px
+          cursor: pointer
+          -webkit-user-select: none
+          -moz-user-select: none
+          -ms-user-select: none
+          user-select: none
+          &:hover input ~ .checkmark
+            border-color: $font-color-hover
+          &:last-child
+            margin-bottom: 0
+          input
+            position: absolute
+            opacity: 0
+            cursor: pointer
+            &:checked ~ .checkmark
+              border: 7px solid $font-color-hover
+        .checkmark
+          position: absolute
+          top: 0
+          left: 0
+          height: 20px
+          width: 20px
+          background-color: transparent
+          border: $border
+          border-radius: 50%
+
+
+.container-fluid.dark_theme
+  .legal-help
+    .legal-request__wrapper
+      .legal-description
+        background-color: $bg-card-color--dark
+        color: $font-color--dark
+        .icons--arrow
+          fill: $font-color--dark
+    .legal-description__spoiler
+      background-color: $bg-card-color--dark
+      color: $font-color--dark
+      .icons--arrow
+        fill: $font-color--dark
+    .legal-form-description
+      background-color: $bg-card-color--dark
+      color: $font-color--dark
+    .legal-form-request
+      .form__block
+        background-color: $bg-card-color--dark
+        color: $font-color--dark
+        .form__input
+          background-color: $bg-card-color--dark
+          color: $font-color--dark
+          &:-moz-placeholder,
+          &::-moz-placeholder,
+          &:-ms-input-placeholder,
+          &::-webkit-input-placeholder,
+          &::placeholder
+            color: $font-color--dark
+
+
+@media(min-width: 768px)
+  .container-fluid
+    .description
+      font-size: 21px
+      line-height: 34px
+      padding: 50px 45px 30px
+    .legal-help
+      font-size: 21px
+      line-height: 34px
+      max-width: 825px
+      margin-left: auto
+      margin-right: auto
+      padding: 50px 45px 30px
+      .legal-description
+        font-size: 18px
+        padding: 20px 40px
+      .legal-form-description
+        padding: 40px

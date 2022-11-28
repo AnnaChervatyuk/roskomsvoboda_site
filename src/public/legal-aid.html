@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Роскомсвобода</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+      <link rel="stylesheet" href="app.css">
+   </head>
+   <body>
+      <div class="container-fluid">
+         <div class="navigator">
+            <div class="block__nav d-none d-md-block d-lg-block">
+               <div class="block__nav-social">
+                  <div class="item-social social-desc " id="social-desc">
+                     <!-- враппер для соц.сетей, их верстка ниже id="social-mob" -->
+                  </div>
+                  <div class="btn-group btn-group-donate" role="group" aria-label="Basic example">
+                     <button type="button" class="btn btn-help">Нужна юр.помощь?</button>
+                     <button type="button" class="btn btn-donate">Поддержать</button>
+                  </div>
+               </div>
+            </div>
+            <div class="block__nav block__nav-category">
+               <!--начало скрывающиеся элементы меню -->
+               <div class="twelve columns filter-wrapper">
+                  <ul class="nav-bar-filter" id="nav-bar-filter">
+                     <li class="nav-item nav-item__logo"><a class="nav-link nav-link__logo" href="/"><img src="./images/logo.svg" width="158" height="18" alt="Роскомсвобода"></a></li>
+                     <li class="nav-item d-none d-md-block dropdown">
+                        <a href="#" id="dropdownMenuButton-news" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Новости и статьи</a>
+                        <div class="block__nav dropdown-menu"  aria-labelledby="dropdownMenuButton-news">
+                           <ul class="nav navbar">
+                              <li class="nav-item"><a class="nav-link" href="/">Новости</a></li>
+                              <li class="nav-item"><a class="nav-link" href="/">Аналитика</a></li>
+                              <li class="nav-item"><a class="nav-link" href="/">Карточки</a></li>
+                              <li class="nav-item"><a class="nav-link" href="/">Переводы</a></li>
+                              <li class="nav-item"><a class="nav-link" href="/">Интервью</a></li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="nav-item d-none d-md-block dropdown">
+                        <a href="#" id="dropdownMenuButton-monitoring" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мониторинг реестров</a>
+                        <div class="block__nav dropdown-menu"  aria-labelledby="dropdownMenuButton-monitoring">
+                           <ul class="nav navbar">
+                              <li class="nav-item"><a class="nav-link" href="/">Реестр запрещенных сайтов</a></li>
+                              <li class="nav-item"><a class="nav-link" href="/">Реестр организаторов распространения информации</a></li>
+                              <li class="nav-item"><a class="nav-link" href="/">Реестр новостных агрегаторов</a></li>
+                              <li class="nav-item"><a class="nav-link" href="/">Статистика блокировок</a></li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="nav-item d-none d-md-block dropdown">
+                        <a href="#" id="dropdownMenuButton-work" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Наша работа</a>
+                        <div class="block__nav dropdown-menu"  aria-labelledby="dropdownMenuButton-work">
+                           <ul class="nav navbar">
+                              <li class="nav-item"><a class="nav-link" href="project.html">Проекты и&nbsp;события</a></li>
+                              <li class="nav-item"><a class="nav-link" href="/">Ссылка 2</a></li>
+                              <li class="nav-item"><a class="nav-link" href="/">Ссылка 3</a></li>
+                              <li class="nav-item"><a class="nav-link" href="/">Ссылка 4</a></li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="nav-item d-none d-md-block"><a href="#">О нас</a></li>
+                     <li class="nav-item d-none d-md-block"><a class="nav-link nav-link__logo" href="#"><img src="./images/demhack.png" width="90" height="12" alt="demhack"></a></li>
+                  </ul>
+                  <div class="dropdown dropdown__more-nav-popup">
+                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton-nav_popup">
+                        <ul class="more-nav-popup" id="more-nav-popup">
+                           <li>
+                              <ul class="subfilter nav navbar">
+                              </ul>
+                           </li>
+                        </ul>
+                     </div>
+                     <button type="button" class="btn dropdown-toggle btn-more-nav-popup d-none d-md-block" id="dropdownMenuButton-nav_popup" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg class="icons icons--more_horiz" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                           <use xlink:href="sprite.svg#icon-more_horiz"></use>
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+               <!--конец скрывающиеся элементы меню -->
+               <div class="btn-group__nav">
+                  <div class="btn-group " role="group" aria-label="Basic example">
+                     <button type="button" class="btn btn-nav">
+                        <svg class="icons icons--moon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                           <use xlink:href="sprite.svg#icon-moon"></use>
+                        </svg>
+                     </button>
+                     <button type="button" class="btn btn-nav">
+                        <svg class="icons icons--search" width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                           <use xlink:href="sprite.svg#icon-search"></use>
+                        </svg>
+                     </button>
+                     <button type="button" class="btn mobail-menu btn-nav d-block d-sm-block d-md-none" id="navbarDropdown_menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg class="icons icons--menu" id="mobile-menu" width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                           <use xlink:href="sprite.svg#icon-menu"></use>
+                        </svg>
+                     </button>
+                     <div class="dropdown-menu mobail-menu dropdown-menu-right" id="mobail-menu">
+                        <div class="dropdown-item panel-group dropdown-accordion" id="accordion">
+                           <div class="panel panel-default">
+                              <div class="panel-heading">
+                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Новости и статьи</a>
+                              </div>
+                              <div id="collapse1" class="panel-collapse collapse in">
+                                 <div class="block__nav">
+                                    <ul class="nav navbar">
+                                       <li class="nav-item"><a class="nav-link" href="/">Новости</a></li>
+                                       <li class="nav-item"><a class="nav-link" href="/">Аналитика</a></li>
+                                       <li class="nav-item"><a class="nav-link" href="/">Карточки</a></li>
+                                       <li class="nav-item"><a class="nav-link" href="/">Переводы</a></li>
+                                       <li class="nav-item"><a class="nav-link" href="/">Интервью</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <div class="panel-heading">
+                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Мониторинг реестров</a>
+                              </div>
+                              <div id="collapse2" class="panel-collapse collapse in">
+                                 <div class="block__nav">
+                                    <ul class="nav navbar">
+                                       <li class="nav-item"><a class="nav-link" href="/">Реестр запрещенных сайтов</a></li>
+                                       <li class="nav-item"><a class="nav-link" href="/">Реестр организаторов распространения информации</a></li>
+                                       <li class="nav-item"><a class="nav-link" href="/">Реестр новостных агрегаторов</a></li>
+                                       <li class="nav-item"><a class="nav-link" href="/">Статистика блокировок</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <div class="panel-heading">
+                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Наша работа</a>
+                              </div>
+                              <div id="collapse3" class="panel-collapse collapse in">
+                                 <div class="block__nav">
+                                    <ul class="nav navbar">
+                                       <li class="nav-item"><a class="nav-link" href="project.html">Проекты и события</a></li>
+                                       <li class="nav-item"><a class="nav-link" href="/">Ссылка 2</a></li>
+                                       <li class="nav-item"><a class="nav-link" href="/">Ссылка 3</a></li>
+                                       <li class="nav-item"><a class="nav-link" href="/">Ссылка 4</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <div class="panel-heading">
+                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">О нас</a>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <div class="panel-heading">
+                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><img src="./images/demhack.png" width="113" height="14" alt="demhack"></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="dropdown-item item-help">
+                           <button type="button" class="btn btn-donate">Поддержать</button>
+                           <button type="button" class="btn btn-help">Нужна юр.помощь?</button>
+                        </div>
+                        <div class="dropdown-item item-social social-mob" id="social-mob">
+                           <div class="btn-group btn-social" role="group" aria-label="Basic example">
+                              <button type="button" class="btn">
+                                 <svg class="icons icons--tel" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <use xlink:href="sprite.svg#icon-tel"></use>
+                                 </svg>
+                              </button>
+                              <button type="button" class="btn">
+                                 <svg class="icons icons--fb" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <use xlink:href="sprite.svg#icon-fb"></use>
+                                 </svg>
+                              </button>
+                              <button type="button" class="btn">
+                                 <svg class="icons icons--vk" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <use xlink:href="sprite.svg#icon-vk"></use>
+                                 </svg>
+                              </button>
+                              <button type="button" class="btn">
+                                 <svg class="icons icons--twitter" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <use xlink:href="sprite.svg#icon-twitter"></use>
+                                 </svg>
+                              </button>
+                              <div class="btn-group dropleft more-social">
+                                 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg class="icons icons--more_horiz" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                       <use xlink:href="sprite.svg#icon-more_horiz"></use>
+                                    </svg>
+                                 </button>
+                                 <div class="dropdown-menu more-social__menu" id="more-social">
+                                    <div class="block__nav">
+                                       <ul class="nav navbar">
+                                          <li class="nav-item">
+                                             <button type="button" class="btn">
+                                                <svg class="icons icons--zen" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                   <use xlink:href="sprite.svg#icon-zen"></use>
+                                                </svg>
+                                             </button>
+                                             <a class="nav-link" href="/">Дзен</a>
+                                          </li>
+                                          <li class="nav-item">
+                                             <button type="button" class="btn">
+                                                <svg class="icons icons--instagram" width="31" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                   <use xlink:href="sprite.svg#icon-instagram"></use>
+                                                </svg>
+                                             </button>
+                                             <a class="nav-link" href="/">Инстаграмм</a>
+                                          </li>
+                                          <li class="nav-item">
+                                             <button type="button" class="btn">
+                                                <svg class="icons icons--youtube" width="31" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                   <use xlink:href="sprite.svg#icon-youtube"></use>
+                                                </svg>
+                                             </button>
+                                             <a class="nav-link" href="/">YouTube</a>
+                                          </li>
+                                          <li class="nav-item">
+                                             <button type="button" class="btn">
+                                                <svg class="icons icons--rss" width="27" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                   <use xlink:href="sprite.svg#icon-rss"></use>
+                                                </svg>
+                                             </button>
+                                             <a class="nav-link" href="/">RSS</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <!-- </div> -->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="legal-help">
+            <h1>Получить юридическую помощь</h1>
+            <p>
+              Опытные юристы и адвокаты Роскомсвободы готовы предоставить бесплатную юридическую помощь тем пользователям, которые подвергаются незаконному уголовному либо административному преследованию за выражение мнения онлайн, деятельность в социальных сетях либо иные действия, связанные с использованием киберпространства.
+            </p>
+
+            <div class="legal-request__wrapper">
+              <div class="legal-request legal-description ">
+                <div class="legal-description-request">
+                  <p>Если ваше дело уже направлено в&nbsp;суд перед отправкой заявки на&nbsp;правовую помощь нужно самостоятельно ознакомиться с&nbsp;материалами дела. <span class="spoiler-btn spoiler-close text-link">Вот, как это сделать</span></p>              <p class="legal-description-request__icon">
+                    <svg class="icons icons--arrow" width="13" height="14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                       <use xlink:href="sprite.svg#icon-arrow"></use>
+                    </svg>
+                  </p>
+                </div>
+
+                <div class="legal-description-content">
+                  <h4>Посещение районного/городского суда</h4>
+                  <ol>
+                    <li>Скачайте, заполните и&nbsp;распечатайте 2&nbsp;экземпляра образца ходатайства для ознакомления с&nbsp;материалами дела;</li>
+                    <li>Придите в&nbsp;суд с&nbsp;2&nbsp;экземплярами ходатайства, подайте его в&nbsp;канцелярию: 1&nbsp;экземпляр остается у&nbsp;суда, на&nbsp;втором должен быть проставлен штамп суда с&nbsp;датой приема; Если вы&nbsp;находитесь не&nbsp;в&nbsp;России, то&nbsp;за&nbsp;вас это могут сделать: ваши близкие по&nbsp;доверенности, адвокаты в&nbsp;вашем городе, юристы. (можно&nbsp;же ознакомиться онлайн через ГАС Правосудие).</li>
+                    <li>Прийти в&nbsp;назначенный день и&nbsp;сфотографировать материалы дела на&nbsp;телефон или камеру (рекомендуем использовать приложение CamScanner);</li>
+                    <li>Направить материалы нам.</li>
+                  </ol>
+                  <h4>Удалённо через систему ГАС &laquo;Правосудие&raquo;.</h4>
+                  <ol>
+                    <li>Удалённо через систему ГАС &laquo;Правосудие&raquo;;</li>
+                    <li>Зайдите на&nbsp;сайт вашего районного суда;</li>
+                    <li>Найдите вкладку&nbsp;&mdash; &laquo;Обращение граждан&raquo;/&laquo;ГАС &laquo;Правосудие&raquo;&quot; и&nbsp;нажмите на&nbsp;неё;</li>
+                    <li>Заполните обращение и&nbsp;отправьте в&nbsp;суд.</li>
+                  </ol>
+                  <h4>Для жителей Москвы</h4>
+                  <ol>
+                  <li>Зайти на&nbsp;официальный портал судов общей юрисдикции города Москва;</li>
+                  <li>Найти раздел &laquo;личный кабинет&raquo;;</li>
+                  <li>Авторизоваться через Госуслуги;</li>
+                  <li>Составить и&nbsp;подать обращение.</li>
+                  </ol>
+                </div>
+              </div>
+              <div class="legal-description__spoiler spoiler-btn">
+                Свернуть&nbsp;
+                <svg class="icons icons--arrow" width="13" height="14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                   <use xlink:href="sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </div>
+
+
+
+            <div class="legal-request legal-form-description ">
+              <h3>Заявка на&nbsp;правовую помощь</h3>
+              <p class="form-request__about">После получения заявки мы&nbsp;обработаем ее&nbsp;в&nbsp;течение 2&nbsp;дней, оценим приемлемость и&nbsp;напишем вам, берем&nbsp;ли кейс в&nbsp;работу.</p>
+              <button class="btn btn-request">Оформить</button>
+            </div>
+
+            <div class="legal-request legal-form-request hidden">
+              <form class="paragraph" action="/legal-aid/" method="POST">
+
+              <div class="form__block">
+                <h3>Что произошло?</h3>
+                <p class="request-desclaimer">Чем точнее опишите ситуацию&nbsp;&mdash; тем быстрее мы&nbsp;сможем помочь.</p>
+
+                <input type="hidden" name="csrfmiddlewaretoken" value="TidKTRRYv7MwXHiPTBLSDjSoDqNW6uG12CGYuxPKN0mqtzOhDtfcOPYFQaEdYS2I">
+
+                <div class="list_problems">
+                  <label class="item_problems">На&nbsp;меня завели административное или уголовное дело
+                    <input type="radio" name="radio" required="">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item_problems">Мой сайт или страницу заблокировали
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item_problems">Мне нужна помощь со&nbsp;сбором средств на&nbsp;оплату штрафа
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item_problems">Мои персональные данные утекли в&nbsp;сеть
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item_problems">Нужна консультация перед допросом, оформлением протокола
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item_problems">Меня задержали по&nbsp;городской системе распознавания лиц
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item_problems">Другое
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form__block">
+                <div class="form__el message">
+                  <span>Обстоятельства дела кратко и&nbsp;в&nbsp;хронологической последовательности</span>
+                  <textarea name="message" cols="40" rows="10" class="form__input help" placeholder="Чем вам помочь?" required="" id="id_message"></textarea>
+                </div>
+
+                <div class="form">
+                  <div class="form__el name">
+                    <span>Имя</span>
+                    <input type="text" name="name" class="form__input" placeholder="Имя и фамилия" required="" id="id_name">
+                  </div>
+                  <div class="form__el link">
+                    <span>Ссылка на материалы дела</span>
+                    <input type="text" name="link" class="form__input" placeholder="Я.Диск, Google Drive и т.д" required="" id="id_link">
+                  </div>
+                  <div class="form__el surname">
+                    <span>Email для ответа</span>
+                    <input type="email" name="email" class="form__input" placeholder="Ваш e-mail" required="" id="id_email">
+                  </div>
+                  <div class="form__el telegram">
+                    <span>Юзернейм в Telegram (не обязательно)</span>
+                    <input type="text" name="telegram" class="form__input"  id="id_telegram">
+                  </div>
+                </div>
+
+                  <div class="recaptcha">
+                    <script src="https://www.google.com/recaptcha/api.js"></script>
+                    <script type="text/javascript">
+                        // Submit function to be called, after reCAPTCHA was successful.
+                        var onSubmit_5e6718b5574740d390155164dad2b3d4 = function(token) {
+                            console.log("reCAPTCHA validated for 'data-widget-uuid=\"5e6718b5574740d390155164dad2b3d4\"'")
+                        };
+                    </script>
+                    <div class="g-recaptcha" data-sitekey="6Lfw7nYaAAAAAOGcICYBw0OjzF7dKaj68SSHLDnx" required="" id="id_captcha" data-widget-uuid="5e6718b5574740d390155164dad2b3d4" data-callback="onSubmit_5e6718b5574740d390155164dad2b3d4" data-size="normal"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lfw7nYaAAAAAOGcICYBw0OjzF7dKaj68SSHLDnx&amp;co=aHR0cHM6Ly9yb3Nrb21zdm9ib2RhLm9yZzo0NDM.&amp;hl=ru&amp;v=Km9gKuG06He-isPsP6saG8cn&amp;size=normal&amp;cb=fbof3qocx2cc" width="304" height="78" role="presentation" name="a-i44cbw71z5pt" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+                  </div>
+                  </div>
+                  <div class="block_to_send">
+                    <button type="submit" class="btn btn-send">Отправить</button>
+                    <span class="message">После получения заявки мы&nbsp;обработаем ее&nbsp;в&nbsp;течение 2&nbsp;дней, оценим приемлемость и&nbsp;напишем вам, берем&nbsp;ли кейс в&nbsp;работу</span>
+                  </div>
+              </form>
+              </div>
+
+
+        </div>
+
+
+
+
+         <div class="donate">
+            <div class="donate__header">
+               <h2>Поддержать нас</h2>
+            </div>
+            <div class="donate__content">
+               <div class="donate_pay">
+                 <div class="carousel-donate" >
+                  <div class="carousel btn-group-toggle" data-toggle="buttons" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
+                     <label class="btn btn-donate carousel-cell active">
+                     <input type="radio" name="donate" id="donate1" checked>100р
+                     </label>
+                     <label class="btn btn-donate carousel-cell">
+                     <input type="radio" name="donate" id="donate2">500р
+                     </label>
+                     <label class="btn btn-donate carousel-cell">
+                     <input type="radio" name="donate" id="donate3">1000р
+                     </label>
+                     <label class="btn btn-donate carousel-cell">
+                     <input type="radio" name="donate" id="donate4">5000р
+                     </label>
+                     <label class="btn btn-donate carousel-cell">
+                     <input type="radio" name="donate" id="donate5">другая сумма
+                     </label>
+                  </div>
+                </div>
+                  <div class="donate__gift text-center">
+                     <img src="./images/gift1.png" class="gift-image" alt="стикеры в подарок">
+                     <p class="gift-text text-center">Набор стикеров<br>в&nbsp;подарок</p>
+                  </div>
+                  <div class="donate__btn">
+                     <button type="button" class="btn btn-donate_pay">поддержать&nbsp;&rarr;</button>
+                     <p class="card-text text-center">Принимаем криптовалюту</p>
+                  </div>
+               </div>
+            </div>
+            <button type="button" class="btn btn-about_donate" >Почему мы просим поддержки&nbsp;&rarr;</button>
+         </div>
+         <div class="contacts">
+            <div class="contacts__content">
+               <h5>Контакты</h5>
+               <div class="contacts_list">
+                  <div class="contacts__address">
+                     <p class="address-title">По общим вопросам</p>
+                     <p class="address-text">roskomsvoboda@rublacklist.net</p>
+                  </div>
+                  <div class="contacts__address">
+                     <p class="address-title">По юридическим вопросам</p>
+                     <p class="address-text">legal@roskomsvoboda.org</p>
+                  </div>
+                  <div class="contacts__address">
+                     <p class="address-title">Для СМИ</p>
+                     <p class="address-text">+7&nbsp;903&nbsp;003-89-52</p>
+                  </div>
+               </div>
+            </div>
+            <div class="contacts__email">
+               <h5>Наша рассылка</h5>
+               <p class="card-text">Главное за&nbsp;неделю в&nbsp;области права. <a href="#">Пример рассылки</a>.</p>
+               <form class="form-inline">
+                  <div class="form-group">
+                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                  </div>
+                  <button type="submit" class="btn btn-subscribe">Подписаться</button>
+               </form>
+            </div>
+         </div>
+         <div class="footer" >
+            <div class="btn-partners d-flex justify-content-between flex-row">
+               <a class="nav-link__logo-copyright" href="/"><img src="./images/logo_creative.png" alt="Время менять копирайт"></a>
+               <a class="nav-link__logo-unisender" href="/"><img src="./images/logo_uniSender.png" alt="UniSender"></a>
+            </div>
+            <div class="btn-group btn-footer d-flex justify-content-between" role="group" aria-label="Basic example">
+               <button type="button" class="btn">
+                  <svg class="icons icons--tel" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <use xlink:href="sprite.svg#icon-tel"></use>
+                  </svg>
+               </button>
+               <button type="button" class="btn">
+                  <svg class="icons icons--fb" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <use xlink:href="sprite.svg#icon-fb"></use>
+                  </svg>
+               </button>
+               <button type="button" class="btn">
+                  <svg class="icons icons--vk" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <use xlink:href="sprite.svg#icon-vk"></use>
+                  </svg>
+               </button>
+               <button type="button" class="btn">
+                  <svg class="icons icons--twitter" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <use xlink:href="sprite.svg#icon-twitter"></use>
+                  </svg>
+               </button>
+               <button type="button" class="btn">
+                  <svg class="icons icons--youtube" width="31" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <use xlink:href="sprite.svg#icon-youtube"></use>
+                  </svg>
+               </button>
+               <button type="button" class="btn">
+                  <svg class="icons icons--zen" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <use xlink:href="sprite.svg#icon-zen"></use>
+                  </svg>
+               </button>
+               <button type="button" class="btn">
+                  <svg class="icons icons--instagram" width="31" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <use xlink:href="sprite.svg#icon-instagram"></use>
+                  </svg>
+               </button>
+               <button type="button" class="btn">
+                  <svg class="icons icons--rss" width="27" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <use xlink:href="sprite.svg#icon-rss"></use>
+                  </svg>
+               </button>
+            </div>
+         </div>
+      </div>
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> <!--горизонатльынй скролл блока Наша работа -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>   <!--скрывающиеся элементы меню в планшете и десктопе-->
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> <!--всплывающее окно, например, меню мобилы-->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+      <script>
+        var spoilerBtn =  $('.spoiler-btn')
+        spoilerBtn.on("click", function (e) {
+          $('.legal-description__spoiler')[0].classList.toggle("spoiler-open")
+          $('.legal-description')[0].classList.toggle("spoiler-open")
+        })
+
+        var requestBtn = $('.btn-request')
+        requestBtn.on("click", function (e) {
+          $('.legal-form-description')[0].classList.toggle("hidden")
+          $('.legal-form-request')[0].classList.toggle("hidden")
+        })
+
+        var requestSendBtn = $('.btn-send')
+
+
+
+      </script>
+   </body>
+</html>

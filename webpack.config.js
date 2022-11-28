@@ -107,6 +107,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'legal_person.html',
       template: 'src/public/legal_person.html'
+  }),
+
+    new HtmlWebpackPlugin({
+      filename: 'legal-aid.html',
+      template: 'src/public/legal-aid.html'
   })
   ],
 
