@@ -377,7 +377,24 @@
               </form>
               </div>
 
+              <script>
+                var spoilerBtn =  $('.spoiler-btn')
+                spoilerBtn.on("click", function (e) {
+                  $('.legal-description__spoiler')[0].classList.toggle("spoiler-open")
+                  $('.legal-description')[0].classList.toggle("spoiler-open")
+                })
 
+                var requestBtn = $('.btn-request')
+                requestBtn.on("click", function (e) {
+                  $('.legal-form-description')[0].classList.toggle("hidden")
+                  $('.legal-form-request')[0].classList.toggle("hidden")
+                })
+
+                var requestSendBtn = $('.btn-send')
+
+
+
+              </script>
         </div>
 
 
