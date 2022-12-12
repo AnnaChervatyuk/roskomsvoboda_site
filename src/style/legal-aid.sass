@@ -50,26 +50,6 @@
         .legal-description-request__icon
           padding-left: 40px
           margin: auto 0
-    .legal-form-description
-      padding: 20px
-      text-align: center
-      background-color: #F2F2F3
-      border-radius: 20px
-
-      .form-request__about
-        max-width: 580px
-        text-align: center
-        font-size: 15px
-        line-height: 160%
-        margin: 0 auto 30px
-      .btn-request
-        background-color: $font-color
-        color: #fff
-        min-width: 240px
-        font-size: 15px
-        line-height: 160%
-        &:hover
-          color:  $font-color-hover
   .legal-form-request
     .form__block
       background-color: #F2F2F3
@@ -134,6 +114,38 @@
           border: $border
           border-radius: 50%
 
+.legal-form-description
+  background-color: #F2F2F3
+  border-radius: 20px
+
+.legal-form-description,
+.legal-request__help > .legal-about__request
+  padding: 20px
+  text-align: center
+  .form-request__about
+    max-width: 580px
+    text-align: center
+    font-size: 15px
+    line-height: 160%
+    margin: 0 auto 30px
+  .btn-request
+    background-color: $font-color
+    color: #fff
+    min-width: 240px
+    font-size: 15px
+    line-height: 160%
+    &:hover
+      color:  $font-color-hover
+
+.legal-request__help
+  border-bottom: $border
+  .legal-about__request
+    max-width: 400px
+    margin: 0 auto
+    box-sizing: content-box
+    padding: 60px 0
+
+
 
 .container-fluid.dark_theme
   .legal-help
@@ -164,7 +176,8 @@
           &::-webkit-input-placeholder,
           &::placeholder
             color: $font-color--dark
-
+  .legal-request__help > .legal-about__request
+    color: $font-color--dark
 
 @media(min-width: 768px)
   .container-fluid
@@ -184,3 +197,5 @@
         padding: 20px 40px
       .legal-form-description
         padding: 40px
+    .legal-request__help > .legal-about__request
+      padding: 120px 40px

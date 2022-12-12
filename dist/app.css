@@ -3660,29 +3660,6 @@ h6 {
   padding-left: 40px;
   margin: auto 0;
 }
-.container-fluid .legal-help .legal-form-description {
-  padding: 20px;
-  text-align: center;
-  background-color: #F2F2F3;
-  border-radius: 20px;
-}
-.container-fluid .legal-help .legal-form-description .form-request__about {
-  max-width: 580px;
-  text-align: center;
-  font-size: 15px;
-  line-height: 160%;
-  margin: 0 auto 30px;
-}
-.container-fluid .legal-help .legal-form-description .btn-request {
-  background-color: #1D1D1B;
-  color: #fff;
-  min-width: 240px;
-  font-size: 15px;
-  line-height: 160%;
-}
-.container-fluid .legal-help .legal-form-description .btn-request:hover {
-  color: #4661BC;
-}
 .container-fluid .legal-form-request .form__block {
   background-color: #F2F2F3;
   border-radius: 20px;
@@ -3753,6 +3730,47 @@ h6 {
   border-radius: 50%;
 }
 
+.legal-form-description {
+  background-color: #F2F2F3;
+  border-radius: 20px;
+}
+
+.legal-form-description,
+.legal-request__help > .legal-about__request {
+  padding: 20px;
+  text-align: center;
+}
+.legal-form-description .form-request__about,
+.legal-request__help > .legal-about__request .form-request__about {
+  max-width: 580px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 160%;
+  margin: 0 auto 30px;
+}
+.legal-form-description .btn-request,
+.legal-request__help > .legal-about__request .btn-request {
+  background-color: #1D1D1B;
+  color: #fff;
+  min-width: 240px;
+  font-size: 15px;
+  line-height: 160%;
+}
+.legal-form-description .btn-request:hover,
+.legal-request__help > .legal-about__request .btn-request:hover {
+  color: #4661BC;
+}
+
+.legal-request__help {
+  border-bottom: 2px solid #1D1D1B;
+}
+.legal-request__help .legal-about__request {
+  max-width: 400px;
+  margin: 0 auto;
+  box-sizing: content-box;
+  padding: 60px 0;
+}
+
 .container-fluid.dark_theme .legal-help .legal-request__wrapper .legal-description {
   background-color: #3A3A3A;
   color: #E4E4E4;
@@ -3782,6 +3800,9 @@ h6 {
 .container-fluid.dark_theme .legal-help .legal-form-request .form__block .form__input:-moz-placeholder, .container-fluid.dark_theme .legal-help .legal-form-request .form__block .form__input::-moz-placeholder, .container-fluid.dark_theme .legal-help .legal-form-request .form__block .form__input:-ms-input-placeholder, .container-fluid.dark_theme .legal-help .legal-form-request .form__block .form__input::-webkit-input-placeholder, .container-fluid.dark_theme .legal-help .legal-form-request .form__block .form__input::placeholder {
   color: #E4E4E4;
 }
+.container-fluid.dark_theme .legal-request__help > .legal-about__request {
+  color: #E4E4E4;
+}
 
 @media (min-width: 768px) {
   .container-fluid .description {
@@ -3803,5 +3824,8 @@ h6 {
   }
   .container-fluid .legal-help .legal-form-description {
     padding: 40px;
+  }
+  .container-fluid .legal-request__help > .legal-about__request {
+    padding: 120px 40px;
   }
 }
