@@ -112,6 +112,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'legal-aid.html',
       template: 'src/public/legal-aid.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'calendar.html',
+      template: 'src/public/calendar.html'
   })
   ],
 
