@@ -3845,51 +3845,74 @@ h6 {
   margin: 30px 15px 85px;
 }
 
-.calendar__item {
+.calendar__item,
+.calendar__item-next {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
-.calendar__item:hover {
+.calendar__item:hover,
+.calendar__item-next:hover {
   cursor: pointer;
 }
-.calendar__item:hover .calendar__title {
+.calendar__item:hover .calendar__title,
+.calendar__item-next:hover .calendar__title {
   color: #4661BC;
 }
-.calendar__item:hover .icons--goTo {
+.calendar__item:hover .icons--goTo,
+.calendar__item-next:hover .icons--goTo {
   fill: #4661BC;
 }
-.calendar__item:hover .calendar__image img {
+.calendar__item:hover .calendar__image img,
+.calendar__item-next:hover .calendar__image img {
   transform: scale(1.01);
 }
-.calendar__item .calendar__image {
+.calendar__item .calendar__image,
+.calendar__item-next .calendar__image {
   margin-bottom: 20px;
 }
-.calendar__item .calendar__image img {
+.calendar__item .calendar__image img,
+.calendar__item-next .calendar__image img {
   border-radius: 20px;
   -webkit-transition: transform 200ms ease-out;
   -moz-transition: transform 200ms ease-out;
   -o-transition: transform 200s ease-out;
   transition: transform 200ms ease-out;
 }
-.calendar__item .calendar__content {
+.calendar__item .calendar__content,
+.calendar__item-next .calendar__content {
   margin-bottom: 20px;
 }
-.calendar__item .calendar__content .calendar__title {
+.calendar__item .calendar__content .calendar__title,
+.calendar__item-next .calendar__content .calendar__title {
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: 125%;
   margin-bottom: 8px;
 }
-.calendar__item .calendar__content .calendar__news-list {
+.calendar__item .calendar__content .calendar__news-list,
+.calendar__item-next .calendar__content .calendar__news-list {
   gap: 8px;
 }
-.calendar__item .calendar__content .calendar__news-list span::after {
+.calendar__item .calendar__content .calendar__news-list span::after,
+.calendar__item-next .calendar__content .calendar__news-list span::after {
   content: "/";
   margin-left: 8px;
 }
-.calendar__item .calendar__content .calendar__news-list span:last-child::after {
+.calendar__item .calendar__content .calendar__news-list span:last-child::after,
+.calendar__item-next .calendar__content .calendar__news-list span:last-child::after {
   content: "";
+}
+
+.calendar__item {
+  position: relative;
+}
+.calendar__item .calendar__item-btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .paragraph__calendar {
@@ -3919,6 +3942,12 @@ h6 {
   background: #ffffff;
   padding: 30px;
   position: relative;
+}
+.calendar__popup .calendar__inner h1.calendar__popup__title {
+  margin: 0;
+}
+.calendar__popup .calendar__inner h3 {
+  margin: 20px 0 !important;
 }
 .calendar__popup .calendar__inner .calendar__popup__close {
   position: sticky;
@@ -3960,9 +3989,6 @@ h6 {
   width: 60px;
   height: 2px;
   background: #1D1D1B;
-}
-.calendar__popup .calendar__inner h3 {
-  margin-bottom: 20px;
 }
 
 .dark_theme .calendar__popup {
@@ -4122,5 +4148,9 @@ h6 {
 
   .calendar__item:nth-child(8) .calendar__news-list {
     min-height: 72px;
+  }
+
+  .calendar__popup .calendar__item-next {
+    max-width: 630px;
   }
 }

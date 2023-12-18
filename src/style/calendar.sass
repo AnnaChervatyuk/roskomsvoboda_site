@@ -5,13 +5,14 @@
   gap: 40px
   margin: 30px 15px  85px
 
-.calendar__item
+.calendar__item,
+.calendar__item-next
   display: flex
   flex-direction: column
-  
+  position: relative
   &:hover
     cursor: pointer
-    
+
     .calendar__title
       color: $font-color-hover
     .icons--goTo
@@ -44,6 +45,13 @@
       span:last-child::after
         content: ''
 
+.calendar__item
+  position: relative
+  .calendar__item-btn
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 2
 .paragraph__calendar
   margin: 0 0 10px
   hyphens: auto
@@ -51,11 +59,11 @@
   line-height: 29px
   padding: 0 !important
 
+  
 .calendar__popup
   position: fixed
   z-index: 500
   background: rgba(249, 249, 251, 0.85)
-  // backdrop-filter: blur(20px)
   display: none
   top: 0
   left: 0
@@ -70,6 +78,10 @@
     background: $bg-main-color
     padding: 30px
     position: relative
+    h1.calendar__popup__title
+      margin: 0
+    h3
+      margin: 20px 0 !important
     .calendar__popup__close
       position: sticky
       width: 36px
@@ -104,8 +116,7 @@
       width: 60px
       height: 2px
       background: $font-color
-    h3
-      margin-bottom: 20px
+
 
 .dark_theme
   .calendar__popup
@@ -221,6 +232,10 @@
   .calendar__item:nth-child(8)
     .calendar__news-list
       min-height: 72px
+  
+  .calendar__popup
+    .calendar__item-next
+      max-width: 630px
 
 
 
