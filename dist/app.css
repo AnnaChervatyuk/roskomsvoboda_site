@@ -3851,20 +3851,32 @@ h6 {
   flex-direction: column;
   position: relative;
 }
-.calendar__item:hover,
-.calendar__item-next:hover {
+.calendar__item .calendar__title .icons,
+.calendar__item-next .calendar__title .icons {
+  fill: #1D1D1B;
+}
+.calendar__item.blocked .calendar__content,
+.calendar__item-next.blocked .calendar__content {
+  color: #6B6B66;
+}
+.calendar__item.blocked .calendar__content .icons,
+.calendar__item-next.blocked .calendar__content .icons {
+  fill: #6B6B66;
+}
+.calendar__item:not(.blocked):hover,
+.calendar__item-next:not(.blocked):hover {
   cursor: pointer;
 }
-.calendar__item:hover .calendar__title,
-.calendar__item-next:hover .calendar__title {
+.calendar__item:not(.blocked):hover .calendar__title,
+.calendar__item-next:not(.blocked):hover .calendar__title {
   color: #4661BC;
 }
-.calendar__item:hover .icons--goTo,
-.calendar__item-next:hover .icons--goTo {
+.calendar__item:not(.blocked):hover .calendar__title .icons,
+.calendar__item-next:not(.blocked):hover .calendar__title .icons {
   fill: #4661BC;
 }
-.calendar__item:hover .calendar__image img,
-.calendar__item-next:hover .calendar__image img {
+.calendar__item:not(.blocked):hover .calendar__image img,
+.calendar__item-next:not(.blocked):hover .calendar__image img {
   transform: scale(1.01);
 }
 .calendar__item .calendar__image,
@@ -3991,6 +4003,18 @@ h6 {
   background: #1D1D1B;
 }
 
+.dark_theme .calendar__item .calendar__title .icons,
+.dark_theme .calendar__item-next .calendar__title .icons {
+  fill: #E4E4E4;
+}
+.dark_theme .calendar__item.blocked .calendar__content,
+.dark_theme .calendar__item-next.blocked .calendar__content {
+  color: #9C9D9E;
+}
+.dark_theme .calendar__item.blocked .calendar__content .calendar__title .icons,
+.dark_theme .calendar__item-next.blocked .calendar__content .calendar__title .icons {
+  fill: #9C9D9E;
+}
 .dark_theme .calendar__popup {
   background: #1A1C1E;
 }

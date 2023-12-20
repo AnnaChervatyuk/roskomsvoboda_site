@@ -10,13 +10,20 @@
   display: flex
   flex-direction: column
   position: relative
-  &:hover
+  .calendar__title
+    .icons
+      fill: $font-color
+  &.blocked
+    .calendar__content
+      color: #6B6B66
+      .icons
+        fill: #6B6B66
+  &:not(.blocked):hover
     cursor: pointer
-
     .calendar__title
       color: $font-color-hover
-    .icons--goTo
-      fill: $font-color-hover
+      .icons
+        fill: $font-color-hover
     .calendar__image
       img
         transform: scale(1.01)
@@ -119,6 +126,19 @@
 
 
 .dark_theme
+  .calendar__item,
+  .calendar__item-next
+    .calendar__title
+      .icons
+        fill: $font-color--dark
+    &.blocked
+      .calendar__content
+        color: #9C9D9E
+        .calendar__title
+          .icons
+            fill: #9C9D9E
+
+
   .calendar__popup
     background: $bg-main-color--dark
     .calendar__inner
